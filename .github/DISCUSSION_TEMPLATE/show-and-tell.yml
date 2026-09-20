@@ -1,0 +1,27 @@
+title: "Process blueprint: "
+body:
+  - type: markdown
+    attributes:
+      value: "Only share material you may publish. Label proposals, test data and observed outcomes separately. Customer results require permission and evidence."
+  - type: textarea
+    id: process
+    attributes:
+      label: The process and its purpose
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: What is the status?
+      options:
+        - Proposed design
+        - Tested with synthetic data
+        - Observed in a real process with permission to share
+    validations:
+      required: true
+  - type: textarea
+    id: learning
+    attributes:
+      label: What did you learn, and what remains uncertain?
+    validations:
+      required: true

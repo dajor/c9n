@@ -1,0 +1,21 @@
+title: "A process I would like to improve: "
+body:
+  - type: markdown
+    attributes:
+      value: "Share a non-confidential example. Do not include customer data, credentials or your email address. Commercial pilot enquiries belong in the private contact route linked from the README."
+  - type: textarea
+    id: process
+    attributes:
+      label: What happens in this process today?
+    validations:
+      required: true
+  - type: textarea
+    id: human
+    attributes:
+      label: Which decisions should remain with a person?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What evidence would show an improvement?

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask the community
+    url: https://github.com/dajor/wirkivo/discussions
+    about: General questions and non-confidential process ideas.
+  - name: Discuss a guided pilot privately
+    url: https://github.com/dajor/wirkivo/blob/main/docs/PILOT.md
+    about: Use the email contact route for pilot enquiries and commercial details.

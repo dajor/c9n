@@ -1,0 +1,26 @@
+name: Report a product problem
+description: Share a reproducible problem from a demonstration or pilot.
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "This issue is public. Remove customer information, credentials and private prompts. For confidential pilot questions, use the contact route in docs/PILOT.md."
+  - type: input
+    id: version
+    attributes:
+      label: Version or demonstration
+      description: Include the version/date and browser, if known.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you try?
+      description: Steps to reproduce, expected result and actual result. Use synthetic examples.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: How does it affect your work?

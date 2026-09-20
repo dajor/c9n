@@ -1,0 +1,3 @@
+process,phase,observation_type,period,source,cases,human_work_minutes,review_minutes,quality_checked,quality_passed_first_time,quality_rule,comparison_notes
+,baseline,real,,,,,,,,,
+,pilot,real,,,,,,,,,

@@ -1,0 +1,27 @@
+name: Suggest a useful improvement
+description: Tell us what work you need to accomplish and how you would judge success.
+title: "[Idea] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Describe the process without customer names or confidential information. This issue is public."
+  - type: textarea
+    id: job
+    attributes:
+      label: What are you trying to accomplish?
+    validations:
+      required: true
+  - type: textarea
+    id: obstacle
+    attributes:
+      label: What gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: What would a better result look like?
+      description: Include quality, effort or responsibility, if relevant.
+    validations:
+      required: true

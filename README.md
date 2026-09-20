@@ -4,7 +4,7 @@
 
 Wirkivo helps teams turn an AI ambition into a shared operating model: map responsibilities, build workflows, review results and measure the effect on everyday work.
 
-**[Explore the product](https://dajor.github.io/wirkivo/) · [Request a guided pilot](docs/PILOT.md) · [Deutsch](README.de.md) · [Join the discussion](https://github.com/dajor/wirkivo/discussions)**
+**[Explore the product](https://dajor.github.io/wirkivo/en.html) · [Request a guided pilot](docs/PILOT.md) · [Deutsch](README.de.md) · [Join the discussion](https://github.com/dajor/wirkivo/discussions)**
 
 ![Wirkivo's interactive company landscape: people, AI roles and shared knowledge, with the selected role explained on the right.](docs/assets/company-landscape.png)
 

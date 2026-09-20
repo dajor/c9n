@@ -4,7 +4,7 @@
 
 Wirkivo verbindet Organisationsgestaltung, Wissen, Workflows und Messung. Damit Teams gemeinsam klären können, was Menschen verantworten, was KI vorbereitet und welche Veränderung tatsächlich hilft.
 
-**[Produkt ansehen](https://dajor.github.io/wirkivo/) · [Pilot anfragen](docs/PILOT.md) · [English](README.md) · [Community](https://github.com/dajor/wirkivo/discussions)**
+**[Produkt ansehen](https://dajor.github.io/wirkivo/) · [Pilot anfragen](docs/PILOT.de.md) · [English](README.md) · [Community](https://github.com/dajor/wirkivo/discussions)**
 
 ![Interaktive Unternehmenslandkarte mit Menschen, geplanten KI-Rollen und Wissensbasis](docs/assets/company-landscape.png)
 
@@ -23,13 +23,13 @@ Marketing ist ein Anwendungsfall neben vielen anderen, kein eigener Hauptbereich
 
 Die lokale Testversion enthält Anmeldung, Arbeitsräume, Designer, Unternehmenslandkarte, persönliche Startseite und einen begrenzten Wissensablauf mit dauerhafter Prüfung. Nicht jedes beliebig gezeichnete Workflow-Diagramm ist bereits ausführbar. Ein öffentlich gehosteter Produkttest und veröffentlichte Kundenergebnisse stehen noch aus.
 
-[Nachweise und Grenzen](docs/EVIDENCE.md) · [Roadmap](docs/ROADMAP.md)
+[Nachweise und Grenzen](docs/EVIDENCE.de.md) · [Roadmap](docs/ROADMAP.de.md)
 
 ## Ein konkreter Einstieg
 
 Ein Prozess, eine verantwortliche Person und eine nachvollziehbare Ausgangsmessung. Gemeinsam den Ablauf gestalten, einen unterstützten Workflow testen und anschließend entscheiden: weiterführen, ändern oder stoppen.
 
-**[Pilot anfragen →](docs/PILOT.md)** · [Gespräch vorbereiten](templates/pilot-brief.md)
+**[Pilot anfragen →](docs/PILOT.de.md)** · [Gespräch vorbereiten](templates/pilot-brief.md)
 
 ## Community und Quellcode
 

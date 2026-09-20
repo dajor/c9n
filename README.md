@@ -10,7 +10,7 @@ Wirkivo helps teams turn an AI ambition into a shared operating model: map respo
 
 *Actual local prototype, September 2026. The six departments are an editable example; the pictured agents are planned roles, not running workers.*
 
-## Start with the work, not another AI dashboard
+## Start with the work your team wants to improve
 
 A team wants faster answers. But who owns the reply? What information may the AI use? Who checks an exception? And does it actually reduce effort?
 

@@ -1,8 +1,10 @@
 # Mit einem messbaren Prozess starten
 
-**[Begleiteten Pilot per E-Mail anfragen →](mailto:daniel.jordan@fellow-consulting.de?subject=Wirkivo%20Pilot-Anfrage)**
+**[Begleiteten Pilot per E-Mail anfragen →](mailto:mail@danieljordan.de?subject=Wirkivo%20Pilot-Anfrage)**
 
-Kontakt: Daniel Jordan, über die auf dem GitHub-Profil von FELLOWPRO veröffentlichte Geschäftsadresse. Der Link öffnet dein E-Mail-Programm. Nichts wird automatisch versendet. Anfragen sind auf Deutsch und Englisch möglich.
+Kontakt: Daniel Jordan, über die für Wirkivo festgelegte Kontaktadresse. Der Link öffnet dein E-Mail-Programm. Nichts wird automatisch versendet. Anfragen sind auf Deutsch und Englisch möglich.
+
+**[Kontaktformular öffnen](https://dajor.github.io/wirkivo/#contact)**
 
 ## Ein guter Einstieg ins Gespräch
 

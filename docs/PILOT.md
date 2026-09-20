@@ -1,8 +1,10 @@
 # Start with one process you can measure
 
-**[Request a guided pilot by email →](mailto:daniel.jordan@fellow-consulting.de?subject=Wirkivo%20pilot%20enquiry)**
+**[Request a guided pilot by email →](mailto:mail@danieljordan.de?subject=Wirkivo%20pilot%20enquiry)**
 
-Contact: Daniel Jordan, using the business contact published on the FELLOWPRO GitHub organisation profile. Email opens your mail application; nothing is sent automatically. English and German enquiries are welcome.
+Contact: Daniel Jordan, using the designated contact address for Wirkivo. Email opens your mail application; nothing is sent automatically. English and German enquiries are welcome.
+
+**[Open the contact form](https://dajor.github.io/wirkivo/en.html#contact)**
 
 ## A useful first conversation
 

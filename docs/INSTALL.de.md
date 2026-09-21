@@ -20,3 +20,7 @@ Design, Wissen und Workflows laufen im eigenen Docker-Host. Modellzugänge werde
 - Updates benötigen eine konkrete neue Version und ihre Anleitung. Der Erstinstaller überschreibt eine vorhandene `.env` nicht. Image-Rollback stellt Datenmigrationen nicht zurück.
 - Für mehrere Installationen auf einem Host unterschiedliche Compose-Projektnamen und Loopback-Ports wählen.
 - Produktcode und Nutzungsrechte sind derzeit privat. Keine Open-Source-Lizenz wird durch diesen Download vergeben. Pilotzugang: https://c9n.app/#contact
+
+## Optional: auf DigitalOcean betreiben
+
+Die [DigitalOcean-Anleitung](https://c9n.app/digitalocean.html) führt durch die Einrichtung eines Docker-Droplets und die anschließende c9n-Installation. Das Anwendungsimage erhältst du separat im Pilotprogramm; Hostingkosten werden über dein eigenes DigitalOcean-Konto abgerechnet.

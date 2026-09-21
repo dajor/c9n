@@ -19,3 +19,7 @@ Designs, knowledge and workflows run on your own host. Model credentials are con
 Updates use explicit versions and migration instructions. The initial installer refuses to overwrite an existing `.env`. Rolling back the image does not undo database migrations. Multiple installations require different Compose project names and loopback ports.
 
 Application distribution remains private; this download grants no new Open Source licence. Request pilot access: https://c9n.app/en.html#contact
+
+## Optional: host on DigitalOcean
+
+The [DigitalOcean guide](https://c9n.app/digitalocean.en.html) explains how to set up a Docker Droplet and then install c9n. The application image is supplied separately through the pilot program; hosting is billed to your own DigitalOcean account.

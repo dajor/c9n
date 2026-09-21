@@ -1,4 +1,7 @@
-# c9n
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/c9n/logo-dark.svg">
+  <img src="docs/assets/c9n/logo.svg" alt="c9n" width="240" height="76">
+</picture>
 
 ### Design how people and AI work together. Prove what improves.
 

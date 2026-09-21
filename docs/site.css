@@ -21,3 +21,21 @@ header nav{align-items:center}.language-switch{display:inline-flex;align-items:c
 
 /* Installation choices remain readable on narrow screens. */
 .download-section{display:block}.download-section>div:first-child{max-width:740px;margin-bottom:28px}.download-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;min-width:0}.download-section>div{min-width:0}.cloud-card{background:#fff}.digitalocean-button{gap:12px;align-items:center;background:#0069db;min-height:48px;max-width:100%;text-align:center;justify-content:center}.digitalocean-button:hover{background:#0055b3}.download-card .note{font-size:13px;line-height:1.65}.deployment-guide{max-width:850px;padding:40px 24px 65px}.deployment-guide h1{font-size:clamp(32px,5vw,55px);letter-spacing:-1.5px;margin-top:35px}.deployment-prerequisites{border-left:3px solid #789c45;background:#e6ecdd;padding:16px 24px;margin:28px 0}.deployment-prerequisites p{margin-top:0}.deployment-steps{padding-left:25px}.deployment-steps li{padding:15px 0 22px 8px}.deployment-steps h2{font-size:26px;letter-spacing:-.5px}.deployment-guide pre{padding:18px;background:#e6ecdd;border-radius:8px;overflow-x:auto;font-size:13px;line-height:1.8}.deployment-guide code{overflow-wrap:anywhere}.deployment-boundary{font-size:13px;border-top:1px solid #d9e0d4;padding-top:24px}@media(max-width:760px){.digitalocean-button{width:100%;white-space:normal}.download-options{grid-template-columns:1fr;gap:18px}.deployment-guide{padding-left:20px;padding-right:20px}.deployment-prerequisites{padding:14px 18px}}
+
+/* Mobile art direction: crop the real screenshots in CSS, preserve the original link. */
+.product-preview{display:block;overflow:hidden;border-radius:13px;background:#f6f5ee;border:1px solid #d2ddcf;box-shadow:0 15px 35px #234b2010}
+.product-preview img,.hero-shot .product-preview img,.split .product-preview img{border:0;border-radius:0;box-shadow:none}
+@media(max-width:800px){
+  .product-preview{position:relative;width:100%;box-shadow:0 10px 24px #234b2010}
+  .product-preview img{position:absolute;max-width:none;height:auto;display:block}
+  /* Original 1280 × 1234; show x=290,y=620,w=640,h=500. */
+  .preview-landscape{aspect-ratio:640/500}
+  .preview-landscape img{width:200%;left:-45.3125%;top:-124%}
+  /* Original 1280 × 800; all four workflow cards and the start node. */
+  .preview-workflow{aspect-ratio:560/520}
+  .preview-workflow img{width:228.571429%;left:-87.5%;top:-51.923077%}
+  /* Original 1280 × 1100; dashboard content without the sidebar. */
+  .preview-dashboard{aspect-ratio:980/865}
+  .preview-dashboard img{width:130.612245%;left:-27.55102%;top:-20.231214%}
+  .product-image .image-enlarge{justify-content:center;font-size:13px;min-height:48px;padding:12px 4px}
+}

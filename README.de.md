@@ -41,3 +41,7 @@ Ein Prozess, eine verantwortliche Person und eine nachvollziehbare Ausgangsmessu
 Dieses Repository ist unsere öffentliche Produkt- und Community-Seite. In [Discussions](https://github.com/dajor/c9n/discussions) sammeln wir Fragen und nicht vertrauliche Anwendungsfälle. Über [Issues](https://github.com/dajor/c9n/issues/new/choose) werden konkrete Verbesserungen nachvollziehbar.
 
 Der Produktcode bleibt zunächst privat. Dies ist noch keine Open-Source- oder Self-Hosting-Veröffentlichung. c9n steht für Cooperation. Die öffentliche Produktseite ist https://c9n.app. Kundendaten und geschäftliche Details gehören in eine private Pilot-Anfrage, nicht in öffentliche Diskussionen.
+
+## Markenpaket
+
+[c9n · Logos, Icons, Farben und Schrift](https://c9n.app/brand/) · [ZIP herunterladen](https://c9n.app/brand/c9n-brand-kit.zip)

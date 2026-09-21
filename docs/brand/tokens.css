@@ -1,0 +1,20 @@
+/* c9n brand foundation v2 — 2026-09-21. Canonical source: branding/farben/tokens.css. */
+@font-face{font-family:InterVariable;src:url('./fonts/InterVariable.woff2') format('woff2');font-style:normal;font-weight:100 900;font-display:swap}
+:root{
+ --brand-green:#173E33;--brand-green-hover:#245747;--brand-lime:#88BD32;--brand-ink:#173E33;
+ --brand-white:#FFFFFF;--brand-mist:#F6F5EF;--brand-tint:#E5EDDD;--brand-muted:#56685F;--brand-line:#D5DED3;
+ /* Compatibility aliases for existing landing styles. */
+ --brand-petrol:var(--brand-green);--brand-petrol-dark:var(--brand-green-hover);
+ --bg:var(--brand-mist);--surface:#EEF1E8;--paper:var(--brand-white);
+ --ink:var(--brand-ink);--muted:var(--brand-muted);--line:var(--brand-line);
+ --accent:var(--brand-green);--accent-hover:var(--brand-green-hover);
+ --button-text:var(--brand-white);--visual:var(--brand-tint);--focus:#567A21;
+ --control-border:#819487;--radius-control:8px;--radius-panel:12px;
+ font-family:InterVariable,Inter,system-ui,sans-serif;font-optical-sizing:auto;
+ font-feature-settings:'liga' 1,'calt' 1;color-scheme:light dark;
+}
+@media(prefers-color-scheme:dark){:root{
+ --bg:#101C18;--surface:#192B23;--paper:#15251E;--ink:#F3F6EC;--muted:#B5C5B7;
+ --line:#3C5547;--accent:#A8D563;--accent-hover:#C4E793;--button-text:#101C18;
+ --visual:#253B28;--focus:#A8D563;--control-border:#809887;
+}}

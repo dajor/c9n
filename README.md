@@ -76,3 +76,7 @@ Keep customer details, API keys, prompts containing private data and commercial 
 This is the **public product and community hub**, including documentation, example blueprints and screenshots. The application source is currently private. This repository is not a self-hostable application release and does not grant an open-source licence for the product or its underlying components.
 
 c9n is the current working product name. [Contributing](CONTRIBUTING.md) · [Content and licence status](NOTICE.md)
+
+## Brand assets
+
+[c9n · Logos, icons, colors & typography](https://c9n.app/brand/) · [ZIP download](https://c9n.app/brand/c9n-brand-kit.zip)

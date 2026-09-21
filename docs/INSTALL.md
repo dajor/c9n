@@ -2,6 +2,23 @@
 
 **Early alpha for guided testing · Linux amd64 · Docker with Compose v2.** This installer contains configuration and instructions. Pilot customers receive the application image separately. The installer alone does not contain a runnable application. Community sharing, GPU routing and credits are not enabled.
 
+## Install with a shell script
+
+Requirements: Linux amd64, Docker Engine with Compose v2, Python 3 and curl. Place the separately supplied pilot image and `SHA256SUMS-application.txt` in the same directory. Replace `VERSION` below with the version in the image filename. The script downloads the matching public installer, checks both packages, loads the image and starts c9n with persistent storage.
+
+```sh
+curl -fL https://c9n.app/install.sh -o c9n-install.sh
+curl -fL https://c9n.app/install.sh.sha256 -o c9n-install.sh.sha256
+sha256sum -c c9n-install.sh.sha256
+sh c9n-install.sh --image ./c9n-app-VERSION-linux-amd64.tar.gz
+```
+
+The script creates `./c9n`. If your user cannot access Docker, run the same command with `sudo sh`. Add `--check` to verify packages without installation. Use `--bundle-dir /path/to/packages` for a previously downloaded installer and its `SHA256SUMS-installer.txt`. Existing installations and data volumes are never overwritten. The script does not install Docker or GPU models, or configure public HTTPS.
+
+After startup, open `http://127.0.0.1:8765`. For a remote server, first run `ssh -N -L 8765:127.0.0.1:8765 USER@SERVER` on your own computer. The installer checks that first-owner setup is available.
+
+## Alternative: manual installation
+
 1. Download the installer and the separately supplied application archive with their checksums. Run `sha256sum -c SHA256SUMS-installer.txt` (macOS: `shasum -a 256 -c SHA256SUMS-installer.txt`).
 Use the separate `SHA256SUMS-application.txt` to verify the application archive in the same way.
 2. Extract the installer into a new directory. Load the application with `docker load -i c9n-app-<version>-linux-amd64.tar.gz`.

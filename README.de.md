@@ -1,10 +1,10 @@
-# Wirkivo
+# c9n
 
 ### Zusammenarbeit mit KI gestalten. Wirkung belegen.
 
-Wirkivo verbindet Organisationsgestaltung, Wissen, Workflows und Messung. Damit Teams gemeinsam klären können, was Menschen verantworten, was KI vorbereitet und welche Veränderung tatsächlich hilft.
+c9n verbindet Organisationsgestaltung, Wissen, Workflows und Messung. Damit Teams gemeinsam klären können, was Menschen verantworten, was KI vorbereitet und welche Veränderung tatsächlich hilft.
 
-**[Produkt ansehen](https://dajor.github.io/wirkivo/) · [Pilot anfragen](docs/PILOT.de.md) · [English](README.md) · [Community](https://github.com/dajor/wirkivo/discussions)**
+**[Produkt ansehen](https://c9n.app/) · [Pilot anfragen](docs/PILOT.de.md) · [English](README.md) · [Community](https://github.com/dajor/c9n/discussions)**
 
 ![Interaktive Unternehmenslandkarte mit Menschen, geplanten KI-Rollen und Wissensbasis](docs/assets/company-landscape.png)
 
@@ -33,6 +33,6 @@ Ein Prozess, eine verantwortliche Person und eine nachvollziehbare Ausgangsmessu
 
 ## Community und Quellcode
 
-Dieses Repository ist unsere öffentliche Produkt- und Community-Seite. In [Discussions](https://github.com/dajor/wirkivo/discussions) sammeln wir Fragen und nicht vertrauliche Anwendungsfälle. Über [Issues](https://github.com/dajor/wirkivo/issues/new/choose) werden konkrete Verbesserungen nachvollziehbar.
+Dieses Repository ist unsere öffentliche Produkt- und Community-Seite. In [Discussions](https://github.com/dajor/c9n/discussions) sammeln wir Fragen und nicht vertrauliche Anwendungsfälle. Über [Issues](https://github.com/dajor/c9n/issues/new/choose) werden konkrete Verbesserungen nachvollziehbar.
 
-Der Produktcode bleibt zunächst privat. Dies ist noch keine Open-Source- oder Self-Hosting-Veröffentlichung. Wirkivo ist der aktuelle Arbeitstitel. Kundendaten und geschäftliche Details gehören in eine private Pilot-Anfrage, nicht in öffentliche Diskussionen.
+Der Produktcode bleibt zunächst privat. Dies ist noch keine Open-Source- oder Self-Hosting-Veröffentlichung. c9n ist der aktuelle Arbeitstitel. Kundendaten und geschäftliche Details gehören in eine private Pilot-Anfrage, nicht in öffentliche Diskussionen.

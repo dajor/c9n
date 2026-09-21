@@ -1,12 +1,12 @@
-# Wirkivo
+# c9n
 
 ### Design how people and AI work together. Prove what improves.
 
-Wirkivo helps teams turn an AI ambition into a shared operating model: map responsibilities, build workflows, review results and measure the effect on everyday work.
+c9n helps teams turn an AI ambition into a shared operating model: map responsibilities, build workflows, review results and measure the effect on everyday work.
 
-**[Explore the product](https://dajor.github.io/wirkivo/en.html) · [Request a guided pilot](docs/PILOT.md) · [Deutsch](README.de.md) · [Join the discussion](https://github.com/dajor/wirkivo/discussions)**
+**[Explore the product](https://c9n.app/en.html) · [Request a guided pilot](docs/PILOT.md) · [Deutsch](README.de.md) · [Join the discussion](https://github.com/dajor/c9n/discussions)**
 
-![Wirkivo's interactive company landscape: people, AI roles and shared knowledge, with the selected role explained on the right.](docs/assets/company-landscape.png)
+![c9n's interactive company landscape: people, AI roles and shared knowledge, with the selected role explained on the right.](docs/assets/company-landscape.png)
 
 *Actual local prototype, September 2026. The six departments are an editable example; the pictured agents are planned roles, not running workers.*
 
@@ -14,7 +14,7 @@ Wirkivo helps teams turn an AI ambition into a shared operating model: map respo
 
 A team wants faster answers. But who owns the reply? What information may the AI use? Who checks an exception? And does it actually reduce effort?
 
-Wirkivo connects those questions in one journey:
+c9n connects those questions in one journey:
 
 1. **Design the organisation.** Discuss today's process and the intended collaboration between people and AI. Explore departments, roles and handovers in a visual company map or editable process canvas.
 2. **Make the work repeatable.** Build automations in Standard or Advanced workflow editors. Choose supported providers and models per AI step, and put human review where it belongs.
@@ -59,10 +59,10 @@ Before a conversation, you can use the [pilot brief](templates/pilot-brief.md) a
 
 ## Build with the community
 
-- [Discussions](https://github.com/dajor/wirkivo/discussions): ask questions, share a non-confidential process or discuss the approach.
-- [Issues](https://github.com/dajor/wirkivo/issues/new/choose): report a reproducible problem or describe an improvement.
+- [Discussions](https://github.com/dajor/c9n/discussions): ask questions, share a non-confidential process or discuss the approach.
+- [Issues](https://github.com/dajor/c9n/issues/new/choose): report a reproducible problem or describe an improvement.
 - [Roadmap](docs/ROADMAP.md): see what is testable, what comes next and what is still open.
-- [Releases](https://github.com/dajor/wirkivo/releases): follow documented product updates.
+- [Releases](https://github.com/dajor/c9n/releases): follow documented product updates.
 
 Keep customer details, API keys, prompts containing private data and commercial negotiations out of public issues and discussions. Pilot enquiries have a private contact route.
 
@@ -70,4 +70,4 @@ Keep customer details, API keys, prompts containing private data and commercial 
 
 This is the **public product and community hub**, including documentation, example blueprints and screenshots. The application source is currently private. This repository is not a self-hostable application release and does not grant an open-source licence for the product or its underlying components.
 
-Wirkivo is the current working product name. [Contributing](CONTRIBUTING.md) · [Content and licence status](NOTICE.md)
+c9n is the current working product name. [Contributing](CONTRIBUTING.md) · [Content and licence status](NOTICE.md)

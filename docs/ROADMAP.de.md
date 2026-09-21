@@ -26,6 +26,6 @@ Vor einer Quellcode-Veröffentlichung stehen eine klare Paketierung und die Prü
 
 ## Mitgestalten
 
-Beschreibe, welche Arbeit du erledigen möchtest, was heute im Weg steht und woran du eine Verbesserung erkennen würdest. Nutze [Discussions](https://github.com/dajor/wirkivo/discussions) oder einen [Verbesserungsvorschlag](https://github.com/dajor/wirkivo/issues/new?template=feature.yml).
+Beschreibe, welche Arbeit du erledigen möchtest, was heute im Weg steht und woran du eine Verbesserung erkennen würdest. Nutze [Discussions](https://github.com/dajor/c9n/discussions) oder einen [Verbesserungsvorschlag](https://github.com/dajor/c9n/issues/new?template=feature.yml).
 
 [English](ROADMAP.md)

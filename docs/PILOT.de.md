@@ -1,10 +1,10 @@
 # Mit einem messbaren Prozess starten
 
-**[Begleiteten Pilot per E-Mail anfragen →](mailto:mail@danieljordan.de?subject=Wirkivo%20Pilot-Anfrage)**
+**[Begleiteten Pilot per E-Mail anfragen →](mailto:mail@danieljordan.de?subject=c9n%20Pilot-Anfrage)**
 
-Kontakt: Daniel Jordan, über die für Wirkivo festgelegte Kontaktadresse. Der Link öffnet dein E-Mail-Programm. Nichts wird automatisch versendet. Anfragen sind auf Deutsch und Englisch möglich.
+Kontakt: Daniel Jordan, über die für c9n festgelegte Kontaktadresse. Der Link öffnet dein E-Mail-Programm. Nichts wird automatisch versendet. Anfragen sind auf Deutsch und Englisch möglich.
 
-**[Kontaktformular öffnen](https://dajor.github.io/wirkivo/#contact)**
+**[Kontaktformular öffnen](https://c9n.app/#contact)**
 
 ## Ein guter Einstieg ins Gespräch
 
@@ -28,6 +28,6 @@ Dauer, Umfang und Preis werden individuell vereinbart. Ein Gespräch löst keine
 
 ## Aktueller Zugang
 
-Wirkivo ist ein lokaler Prototyp mit einem Bereitstellungsweg für begleitete Piloten. Eine öffentlich zugängliche Demo-App gibt es noch nicht. Ob euer Prozess bereits unterstützt wird, klären wir vor dem Pilot.
+c9n ist ein lokaler Prototyp mit einem Bereitstellungsweg für begleitete Piloten. Eine öffentlich zugängliche Demo-App gibt es noch nicht. Ob euer Prozess bereits unterstützt wird, klären wir vor dem Pilot.
 
-[Steckbrief vorbereiten](../templates/pilot-brief.md) · [Allgemeine Fragen an die Community](https://github.com/dajor/wirkivo/discussions) · [English](PILOT.md)
+[Steckbrief vorbereiten](../templates/pilot-brief.md) · [Allgemeine Fragen an die Community](https://github.com/dajor/c9n/discussions) · [English](PILOT.md)

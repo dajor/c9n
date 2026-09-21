@@ -1,10 +1,10 @@
 # Start with one process you can measure
 
-**[Request a guided pilot by email →](mailto:mail@danieljordan.de?subject=Wirkivo%20pilot%20enquiry)**
+**[Request a guided pilot by email →](mailto:mail@danieljordan.de?subject=c9n%20pilot%20enquiry)**
 
-Contact: Daniel Jordan, using the designated contact address for Wirkivo. Email opens your mail application; nothing is sent automatically. English and German enquiries are welcome.
+Contact: Daniel Jordan, using the designated contact address for c9n. Email opens your mail application; nothing is sent automatically. English and German enquiries are welcome.
 
-**[Open the contact form](https://dajor.github.io/wirkivo/en.html#contact)**
+**[Open the contact form](https://c9n.app/en.html#contact)**
 
 ## A useful first conversation
 
@@ -30,9 +30,9 @@ Timing, scope and price are agreed individually. A conversation does not automat
 
 ## Current access
 
-Wirkivo is a local prototype with a guided-pilot deployment path. There is no public self-service hosted demo at present. Do not use the screenshots as evidence of production readiness for your particular process.
+c9n is a local prototype with a guided-pilot deployment path. There is no public self-service hosted demo at present. Do not use the screenshots as evidence of production readiness for your particular process.
 
-Use the [pilot brief](../templates/pilot-brief.md) to prepare privately. For a general, non-confidential product question, use [GitHub Discussions](https://github.com/dajor/wirkivo/discussions).
+Use the [pilot brief](../templates/pilot-brief.md) to prepare privately. For a general, non-confidential product question, use [GitHub Discussions](https://github.com/dajor/c9n/discussions).
 
 ## Deutsch
 

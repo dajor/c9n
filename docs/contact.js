@@ -6,6 +6,8 @@ document.querySelectorAll('[data-contact-form]').forEach(form => {
   const initialLabel = button.textContent;
   let submitting = false;
   let submitted = false;
+  let previousPayload = "";
+  let requestId = "";
   function show(message, error = false) {
     status.textContent = message;
     status.hidden = false;
@@ -22,12 +24,18 @@ document.querySelectorAll('[data-contact-form]').forEach(form => {
     status.hidden = true;
     // Build the payload before disabling editing; never retain it in local storage.
     const payload = Object.fromEntries(new FormData(form));
+    const signature = JSON.stringify(payload);
+    if (signature !== previousPayload) {
+      requestId = crypto.randomUUID();
+      previousPayload = signature;
+    }
+    payload.request_id = requestId;
     const fields = [...form.querySelectorAll('input:not([type="hidden"]), textarea')];
     fields.forEach(field => { field.disabled = true; });
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 20000);
     try {
-      const response = await fetch('https://formsubmit.co/ajax/mail@danieljordan.de', {
+      const response = await fetch('https://cloud.c9n.app/contact', {
         method: 'POST', headers: {'Content-Type': 'application/json', Accept: 'application/json'},
         body: JSON.stringify(payload), signal: controller.signal,
       });
@@ -38,6 +46,8 @@ document.querySelectorAll('[data-contact-form]').forEach(form => {
       show(de ? 'Deine Anfrage wurde an den Versanddienst übermittelt. Vielen Dank! Falls du keine Rückmeldung erhältst, schreibe bitte direkt an mail@danieljordan.de.' : 'Your enquiry was submitted to the email service. Thank you! If you do not hear back, please email mail@danieljordan.de directly.');
       submitted = true;
       form.reset();
+      previousPayload = "";
+      requestId = "";
       again.hidden = false;
       button.textContent = de ? 'Übermittelt' : 'Submitted';
     } catch {

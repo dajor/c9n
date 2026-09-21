@@ -7,3 +7,5 @@ Für die Anwendung, die übernommenen Workflow-Komponenten, das Branding und fre
 c9n steht für Cooperation. Die öffentliche Produktseite ist https://c9n.app. Die Screenshots zeigen synthetische Beispieldaten. Ursprüngliche Quellcode-Repositories, Kundendaten, Zugangsdaten und Referenzvideos sind nicht Teil dieses öffentlichen Repositorys.
 
 [Kontakt](docs/PILOT.de.md) · [English](NOTICE.md)
+
+Der öffentliche Download enthält einen versionierten Docker-Installer mit Konfiguration, Anleitung und Prüfsummen. Das Anwendungsimage wird separat im begleiteten Pilot bereitgestellt und ist nicht Teil des öffentlichen Installer-Downloads.

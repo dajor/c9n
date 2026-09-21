@@ -3,6 +3,8 @@
   <img src="docs/assets/c9n/logo.svg" alt="c9n" width="240" height="76">
 </picture>
 
+[Installer herunterladen](https://c9n.app/#download) · Anwendungsimage separat für Pilotkunden.
+
 ### Zusammenarbeit mit KI gestalten. Wirkung belegen.
 
 c9n verbindet Organisationsgestaltung, Wissen, Workflows und Messung. Damit Teams gemeinsam klären können, was Menschen verantworten, was KI vorbereitet und welche Veränderung tatsächlich hilft.

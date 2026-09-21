@@ -3,6 +3,8 @@
   <img src="docs/assets/c9n/logo.svg" alt="c9n" width="240" height="76">
 </picture>
 
+[Download the installer](https://c9n.app/en.html#download) · Application image supplied separately to pilot customers.
+
 ### Design how people and AI work together. Prove what improves.
 
 c9n helps teams turn an AI ambition into a shared operating model: map responsibilities, build workflows, review results and measure the effect on everyday work.

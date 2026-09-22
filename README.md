@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/c9n/logo-dark.svg">
-  <img src="docs/assets/c9n/logo.svg" alt="c9n" width="240" height="76">
+  <img src="docs/assets/c9n/logo.svg" alt="c9n" width="240" height="92">
 </picture>
 
 [Download the installer](https://c9n.app/en.html#download) · Application image supplied separately to pilot customers.

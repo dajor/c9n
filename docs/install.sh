@@ -114,7 +114,7 @@ def main():
         verify(bundle, checksum)
         prefix = 'c9n-' + version + '/'
         required = {'compose.yaml', 'install.sh', 'README.md', 'README.de.md', 'CHANGELOG.md', 'VERSION', 'IMAGE_ID'}
-        optional = {'updater.py', 'setup-updater.py', 'compose.updates.yaml', 'UPDATES.md'}
+        optional = {'RELEASE_NOTES.md', 'updater.py', 'setup-updater.py', 'compose.updates.yaml', 'UPDATES.md'}
         with zipfile.ZipFile(bundle) as archive:
             files = archive.infolist()
             names = [f.filename for f in files]

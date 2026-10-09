@@ -32,7 +32,8 @@ One accountable person, a clear assignment and a traceable baseline. In a guided
 
 **[Request a pilot](docs/PILOT.md)** · [Prepare the conversation](templates/pilot-brief.md) · [Measurement worksheet](templates/measurement.csv)
 
-[Download the installer](https://c9n.app/download.en.html). Pilot customers receive the application image separately; the public package alone does not contain a runnable application.
+[Download the matching installer and application image](https://c9n.app/download.en.html).
+[Read the public release notes](https://c9n.app/releases.en.html) before installation or updating.
 
 ## Community and source code
 
@@ -43,3 +44,16 @@ This repository contains the public product website, documentation and community
 ## Brand assets
 
 [c9n · Logos, icons, colors and typography](https://c9n.app/brand/) · [Download ZIP](https://c9n.app/brand/c9n-brand-kit.zip)
+
+## Public version and release notes
+
+The website shows published versions at [c9n.app/releases.html](https://c9n.app/releases.html).
+`scripts/sync_releases.py --refresh` reads only published releases from `dajor/c9n`,
+preserves their customer notes, and updates the version links, release history and
+matching downloads together. Unpublished local versions are not exported.
+
+The **Sync public release notes** workflow runs when a public release is published,
+edited or deleted. Publishers using `GITHUB_TOKEN` must explicitly dispatch this
+workflow because GitHub does not trigger another workflow for those token events.
+It can also be run manually. The saved public snapshot renders without JavaScript
+or a live GitHub API call; `--check` verifies that the pages match it.

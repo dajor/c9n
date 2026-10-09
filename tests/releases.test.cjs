@@ -3,9 +3,9 @@ const assert=require('node:assert/strict');
 const vm=require('node:vm');
 const fs=require('node:fs');
 const source=fs.readFileSync('docs/releases.js','utf8');
-async function run(payload, fail=false, lang='de') {
- const elements=Object.fromEntries(['.release-badge','[data-release-status]','[data-release-notes]','[data-release-zip]','[data-release-checksum]','[data-release-shell]'].map(k=>[k,{href:'original',textContent:'0.1.0-alpha.1',hidden:false}]));
- const card={dataset:{bundledVersion:'0.1.0-alpha.1'},querySelector:k=>elements[k]};
+async function run(payload, fail=false, lang='de', siteVersion='0.1.0-alpha.1') {
+ const elements=Object.fromEntries(['.release-badge','[data-release-status]','[data-release-notes]','[data-release-zip]','[data-release-application]','[data-release-checksum]','[data-release-shell]'].map(k=>[k,{href:'original',textContent:'0.1.0-alpha.1',hidden:false}]));
+ const card={dataset:{bundledVersion:'0.1.0-alpha.1',siteVersion},querySelector:k=>elements[k]};
  vm.runInNewContext(source,{document:{documentElement:{lang},querySelector:()=>card},AbortController,setTimeout,clearTimeout,fetch:async()=>{if(fail)throw Error();return {ok:true,json:async()=>payload};}});
  await new Promise(resolve=>setImmediate(resolve));return elements;
 }
@@ -14,3 +14,5 @@ test('latest release updates badge, notes and matching download; hides stale ass
 test('network failure preserves known links and explains stale status',async()=>{const e=await run(null,true);assert.equal(e['[data-release-notes]'].href,'original');assert.match(e['[data-release-status]'].textContent,/Live-Abfrage/);});
 test('empty or malformed response keeps known release',async()=>{for(const input of [[],{},[{...release,draft:true}]]){const e=await run(input);assert.equal(e['.release-badge'].textContent,'0.1.0-alpha.1');assert.match(e['[data-release-status]'].textContent,/Live-Abfrage/);}});
 test('English prerelease is explicitly labelled',async()=>{const e=await run([{...release,prerelease:true}],false,'en');assert.equal(e['.release-badge'].textContent,'0.2.0 · Preview');});
+test('known website version keeps notes on the matching language page',async()=>{for(const lang of ['de','en']){const e=await run([release],false,lang,'0.2.0');assert.equal(e['[data-release-notes]'].href,lang==='de'?'releases.html#v0.2.0':'releases.en.html#v0.2.0');}});
+test('download links reject wrong-version assets and other release tags',async()=>{const e=await run([{...release,assets:[{name:'c9n-installer-0.1.1.zip',browser_download_url:'https://github.com/dajor/c9n/releases/download/v0.2.0/c9n-installer-0.1.1.zip'},{name:'c9n-app-0.2.0-linux-amd64.tar.gz',browser_download_url:'https://github.com/dajor/c9n/releases/download/v0.1.1/c9n-app-0.2.0-linux-amd64.tar.gz'}]}]);assert.equal(e['[data-release-zip]'].hidden,true);assert.equal(e['[data-release-application]'].hidden,true);});

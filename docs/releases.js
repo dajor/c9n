@@ -6,6 +6,7 @@
   const status = card.querySelector('[data-release-status]');
   const notes = card.querySelector('[data-release-notes]');
   const zip = card.querySelector('[data-release-zip]');
+  const application = card.querySelector('[data-release-application]');
   const checksum = card.querySelector('[data-release-checksum]');
   const shell = card.querySelector('[data-release-shell]');
   status.textContent = en ? 'Checking the latest public release…' : 'Neueste öffentliche Version wird geprüft …';
@@ -24,18 +25,21 @@
     const version = release.tag_name.replace(/^v/, '');
     const url = 'https://github.com/dajor/c9n/releases/tag/' + encodeURIComponent(release.tag_name);
     badge.textContent = version + (release.prerelease ? (en ? ' · Preview' : ' · Vorabversion') : '');
-    notes.href = url;
+    notes.href = version === card.dataset.siteVersion ? (en ? 'releases.en.html#v' : 'releases.html#v') + version : url;
     notes.textContent = 'Release Notes · ' + version;
     const assets = Array.isArray(release.assets) ? release.assets : [];
-    function assetLink(element, pattern) {
-      const asset = assets.find(a => pattern.test(a.name) && typeof a.browser_download_url === 'string' && a.browser_download_url.startsWith('https://github.com/dajor/c9n/releases/download/'));
+    function assetLink(element, names) {
+      if (!element) return;
+      const base = 'https://github.com/dajor/c9n/releases/download/' + encodeURIComponent(release.tag_name) + '/';
+      const asset = assets.find(a => names.includes(a.name) && a.browser_download_url === base + encodeURIComponent(a.name));
       element.hidden = !asset;
       if (asset) element.href = asset.browser_download_url;
     }
-    assetLink(zip, /^c9n-installer-.*\.zip$/);
-    assetLink(checksum, /^SHA256SUMS-installer\.txt$/);
+    assetLink(zip, ['c9n-installer-' + version + '.zip']);
+    assetLink(application, ['c9n-app-' + version + '-linux-amd64.tar.gz']);
+    assetLink(checksum, ['SHA256SUMS-installer.txt']);
     // The bundled shell installer belongs to the bundled release, never relabel it.
-    if (version !== card.dataset.bundledVersion) assetLink(shell, /^(?:c9n-)?install\.sh$/);
+    if (version !== card.dataset.bundledVersion) assetLink(shell, ['c9n-install.sh', 'install.sh']);
     status.textContent = en ? 'Latest public release. Downloads belong to this version.' : 'Neueste öffentliche Version. Downloads gehören zu diesem Release.';
   }).catch(() => {
     status.textContent = en ? 'Live check unavailable. Showing the last known release; see all releases on GitHub.' : 'Live-Abfrage derzeit nicht möglich. Angezeigt wird der zuletzt bekannte Stand; alle Releases findest du auf GitHub.';

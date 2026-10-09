@@ -15,6 +15,8 @@ jobs:
           python-version: '3.12'
       - run: python scripts/check_public.py
       - run: python scripts/check_pages.py
+      - run: python scripts/sync_releases.py --check
+      - run: python -m unittest discover -s tests -p 'test_*.py'
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

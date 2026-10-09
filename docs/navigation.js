@@ -4,7 +4,7 @@
   if (!header) return;
   const button = header.querySelector('.menu-toggle');
   const panel = header.querySelector('.header-panel');
-  const mobile = window.matchMedia('(max-width: 1000px)');
+  const mobile = window.matchMedia('(max-width: 1120px)');
   let open = false;
 
   function update() {

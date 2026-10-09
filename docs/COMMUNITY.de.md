@@ -1,6 +1,6 @@
 # c9n: Zusammenarbeit ist die Idee
 
-c9n steht für **Cooperation**: c + neun Buchstaben (ooperatio) + n. Menschen, Wissen und KI arbeiten zusammen. Die Community soll diese Zusammenarbeit über einzelne Unternehmen hinaus ermöglichen.
+c9n verbindet Menschen, Wissen und KI in gemeinsamen Abläufen. Die Community soll diese Zusammenarbeit über einzelne Unternehmen hinaus ermöglichen.
 
 ## Eure Installation bleibt unabhängig
 

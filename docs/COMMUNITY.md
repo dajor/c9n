@@ -1,6 +1,6 @@
-# c9n: cooperation is the idea
+# c9n: working together
 
-c9n stands for **cooperation**: c + nine letters (ooperatio) + n. People, knowledge and AI working together. The community aims to extend this cooperation beyond individual organisations.
+c9n connects people, knowledge and AI in shared workflows. The community aims to extend this collaboration beyond individual organisations.
 
 ## Your installation remains independent
 

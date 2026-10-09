@@ -1,10 +1,10 @@
 # c9n: Zusammenarbeit ist die Idee
 
-c9n verbindet Menschen, Wissen und KI in gemeinsamen Abläufen. Die Community soll diese Zusammenarbeit über einzelne Unternehmen hinaus ermöglichen.
+c9n verbindet Menschen und Agenten in gemeinsamen Prozessen mit menschlichen Freigabeschritten. Die Community soll diese Zusammenarbeit über einzelne Unternehmen hinaus ermöglichen.
 
 ## Eure Installation bleibt unabhängig
 
-Design, Wissen, Projekte und Workflows laufen in eurer eigenen c9n-Installation. Eigene Modelle und direkt angebundene Anbieter benötigen keine c9n-Community-Verbindung. GPU-Sharing ist eine freiwillige Erweiterung, keine Voraussetzung für die Nutzung.
+Prozesse, Agentenschritte und Freigaben laufen in eurer eigenen c9n-Installation. Eigene Modelle und direkt angebundene Anbieter benötigen keine c9n-Community-Verbindung. GPU-Sharing ist eine freiwillige Erweiterung, keine Voraussetzung für die Nutzung.
 
 ## Gemeinsam entwickeln
 
@@ -14,7 +14,7 @@ Schon heute können wir Prozesse und Anwendungsfälle diskutieren, Rückmeldunge
 
 Wer freie GPU-Kapazität hat, soll ausgewählte Modelle für andere freigeben können. Der Betreiber bestimmt Empfänger, Verfügbarkeit, Limits und Pausen. Andere Installationen sollen diese Modelle gezielt für passende Aufgaben auswählen können. Eine größere oder teurere Modellklasse ist nicht automatisch für jede Aufgabe nötig.
 
-Ein kleines zentrales Gateway soll die Verbindung, Freigaben und spätere Nutzungsabrechnung vermitteln. Die lokale Anwendung und Modellberechnung laufen weiterhin auf der Infrastruktur der Teilnehmer. Nur ausdrücklich ausgewählte Aufträge werden übertragen; bei einem Community-Aufruf können Gateway und Modellbetreiber die verarbeiteten Eingaben technisch einsehen. Ganze Wissensbestände oder lokale Konten werden nicht automatisch synchronisiert. Teilnahme soll standardmäßig deaktiviert sein.
+Ein kleines zentrales Gateway soll die Verbindung, Freigaben und spätere Nutzungsabrechnung vermitteln. Die lokale Anwendung und Modellberechnung laufen weiterhin auf der Infrastruktur der Teilnehmer. Nur ausdrücklich ausgewählte Aufträge werden übertragen; bei einem Community-Aufruf können Gateway und Modellbetreiber die verarbeiteten Eingaben technisch einsehen. Interne Datenbestände oder lokale Konten werden nicht automatisch synchronisiert. Teilnahme soll standardmäßig deaktiviert sein.
 
 ## Idee für Credits
 

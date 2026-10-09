@@ -3,44 +3,42 @@
   <img src="docs/assets/c9n/logo.svg" alt="c9n" width="240" height="92">
 </picture>
 
-[Installer herunterladen](https://c9n.app/#download) · Anwendungsimage separat für Pilotkunden.
+### Prozesse aufbauen. Agenten arbeiten lassen. Menschen geben frei.
 
-### Zusammenarbeit mit KI gestalten. Wirkung belegen.
+c9n verbindet Aufgaben zu einem gemeinsamen Prozess. Ihr legt die Reihenfolge fest, weist Agenten ihre Schritte zu und bestimmt, welche Ergebnisse ein Mensch prüfen und freigeben muss.
 
-c9n verbindet Organisationsgestaltung, Wissen, Workflows und Messung. Damit Teams gemeinsam klären können, was Menschen verantworten, was KI vorbereitet und welche Veränderung tatsächlich hilft.
+**[Produkt ansehen](https://c9n.app/product.html) · [Pilot anfragen](docs/PILOT.de.md) · [English](README.md)**
 
-**[Produkt ansehen](https://c9n.app/) · [Pilot anfragen](docs/PILOT.de.md) · [English](README.md) · [Community](https://github.com/dajor/c9n/discussions)**
+## Der aktuelle Produktaufbau
 
-![Interaktive Unternehmenslandkarte mit Menschen, geplanten KI-Rollen und Wissensbasis](docs/assets/company-landscape.png)
+1. **Prozess:** Ziel, Start, Schritte und erlaubte nächste Wege festlegen.
+2. **Agentenschritte:** Agent, Auftrag, Eingaben und erwartetes Ergebnis je Schritt bestimmen. Ein Agent kann mehrere Schritte übernehmen; mehrere Agenten können zusammenarbeiten.
+3. **Menschliche Freigabe:** Die zuständige Person prüft. Erst ihre ausdrückliche Freigabe erlaubt den nächsten vorgesehenen Schritt. Rückgabe führt zur Überarbeitung und erneuten Prüfung; Ablehnung folgt dem festgelegten Pfad.
+4. **Verlauf:** Aufgaben, Ergebnisse, Rückmeldungen und Entscheidungen im Zusammenhang betrachten.
 
-*Echter Screenshot des lokalen Prototyps, September 2026. Die Organisation ist ein bearbeitbares Beispiel. Die dargestellten KI-Rollen sind keine laufenden Agenten.*
+Agent, Wächter, Skript, Test und Mensch übernehmen unterschiedliche Aufgaben. [Die Akteure kennenlernen](https://c9n.app/#actors).
 
-## Vom Organisationsbild zur überprüfbaren Zusammenarbeit
+## Entwicklungsstand und Grenzen
 
-- **Design:** Prozesse besprechen, Verantwortlichkeiten klären und Heute mit dem Zielbild vergleichen. Als räumliche Unternehmenslandkarte oder bearbeitbare Zeichenfläche.
-- **Wissen:** Notizen, Text-PDFs und Auszüge erfassen, ordnen, prüfen und wiederverwenden.
-- **Workflows:** Unterstützte Abläufe mit Standard-/Advanced-Editoren gestalten, Modelle je KI-Schritt wählen und Menschen zur Prüfung einbinden.
-- **Wirkung:** Aufwand, Prüfzeit und Qualität mit Quelle und Zeitraum erfassen. Testdaten, Ziele und reale Erhebungen bleiben getrennt.
+Der erste Umfang konzentriert sich auf Prozesse, Agentenschritte und menschliche Freigaben. Projekte, Wissen und Design sind vorerst keine eigenen Produktbereiche dieses Neuaufbaus.
 
-Marketing ist ein Anwendungsfall neben vielen anderen, kein eigener Hauptbereich der Plattform.
+Die bestehenden Hub-Agentenfunktionen bilden die Grundlage. Der vorhandene Ablaufeditor erzeugt Anweisungen für Agenten; daraus folgt noch keine Engine, die jeden gezeichneten Schritt erzwingt. Die neue Prozessausführung mit verbindlichen menschlichen Haltepunkten wird aufgebaut und muss für jeden unterstützten Ablauf geprüft werden. Die Website zeigt gekennzeichnete Erklärbeispiele.
 
-## Was heute möglich ist
+[Nachweise und Grenzen](docs/EVIDENCE.de.md) · [Entwicklungsplan](docs/ROADMAP.de.md)
 
-Die lokale Testversion enthält Anmeldung, Arbeitsräume, Designer, Unternehmenslandkarte, persönliche Startseite und einen begrenzten Wissensablauf mit dauerhafter Prüfung. Nicht jedes beliebig gezeichnete Workflow-Diagramm ist bereits ausführbar. Ein öffentlich gehosteter Produkttest und veröffentlichte Kundenergebnisse stehen noch aus.
+## Mit einem Prozess starten
 
-[Nachweise und Grenzen](docs/EVIDENCE.de.md) · [Roadmap](docs/ROADMAP.de.md)
+Eine verantwortliche Person, ein klarer Auftrag und eine nachvollziehbare Ausgangslage. In einem begleiteten Pilot prüfen wir den unterstützten Ablauf, menschliche Freigaben, Fehler und Nacharbeit. Danach entscheidet ihr anhand der Ergebnisse: weiterführen, ändern oder stoppen.
 
-## Ein konkreter Einstieg
+**[Pilot anfragen](docs/PILOT.de.md)** · [Gespräch vorbereiten](templates/pilot-brief.md) · [Messvorlage](templates/measurement.csv)
 
-Ein Prozess, eine verantwortliche Person und eine nachvollziehbare Ausgangsmessung. Gemeinsam den Ablauf gestalten, einen unterstützten Workflow testen und anschließend entscheiden: weiterführen, ändern oder stoppen.
-
-**[Pilot anfragen →](docs/PILOT.de.md)** · [Gespräch vorbereiten](templates/pilot-brief.md)
+[Installer herunterladen](https://c9n.app/download.html). Das Anwendungsimage wird Pilotkunden separat bereitgestellt; das öffentliche Paket allein enthält keine lauffähige Anwendung.
 
 ## Community und Quellcode
 
-Dieses Repository ist unsere öffentliche Produkt- und Community-Seite. In [Discussions](https://github.com/dajor/c9n/discussions) sammeln wir Fragen und nicht vertrauliche Anwendungsfälle. Über [Issues](https://github.com/dajor/c9n/issues/new/choose) werden konkrete Verbesserungen nachvollziehbar.
+Dieses Repository enthält die öffentliche Produktseite, Dokumentation und Community-Material. Der Anwendungscode ist derzeit privat; eine Open-Source-Lizenz für das Produkt wird hier nicht erteilt. [Veröffentlichungsstand](NOTICE.de.md).
 
-Der Produktcode bleibt zunächst privat. Dies ist noch keine Open-Source- oder Self-Hosting-Veröffentlichung. Die öffentliche Produktseite ist https://c9n.app. Kundendaten und geschäftliche Details gehören in eine private Pilot-Anfrage, nicht in öffentliche Diskussionen.
+[Discussions](https://github.com/dajor/c9n/discussions) · [Issues](https://github.com/dajor/c9n/issues/new/choose) · [Releases](https://github.com/dajor/c9n/releases). Kundendaten, Zugangsdaten und vertrauliche Aufträge gehören in eine private Pilot-Anfrage.
 
 ## Markenpaket
 

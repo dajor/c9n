@@ -1,32 +1,31 @@
 # Public roadmap
 
-This is the current direction, not a delivery-date commitment. Issues and discussions help us prioritise the next useful improvement.
+Updated: 9 October 2026. This is the current direction, not a delivery-date commitment.
 
-## Testable in the local prototype
+## Initial scope: processes, agents and people
 
-- Visual company landscape and separate process canvas.
-- Today / target organisation, role explanations and responsibility fields.
-- Standard and Advanced workflow editors.
-- Bounded knowledge capture → review → storage → follow-up workflow.
-- Personal dashboard and source-backed manual process measurements.
+- Build processes from clear tasks and agent steps.
+- Assign agents with a task, inputs and an expected result.
+- Add human approval as a separate step with an assigned person.
+- Define rework, another review, rejection and error paths.
+- Keep tasks, results and decisions together in process history.
 
-## Next validation milestones
+Projects, Knowledge and Design are not separate areas in the initial rebuild.
 
-1. **Guided onboarding:** validate a new team's complete journey from invitation to the first supported workflow.
-2. **Real model acceptance:** test supported providers with approved inputs, review failure modes and document the result.
-3. **First measured process:** establish comparable baseline and pilot observations, including quality and review effort.
-4. **Public walkthrough:** publish a short recorded demonstration with synthetic data and an explicit version/date.
-5. **Pilot operations:** verify hosting, backup restoration, access recovery and support responsibilities in the chosen environment.
+## Next verifiable stages
 
-## Planned, with scope still to confirm
+1. **Bring over the agent foundation:** Package and verify existing Hub agent features, model connections and local computing capacity in a shared installation.
+2. **Build process execution:** Persist definitions, runs and step states. The existing agent workflow editor generates instructions; this does not establish enforced execution of every drawn step.
+3. **Validate human approvals:** Prove that the process pauses, assigns the responsible person and continues only after approval. Test rework, rejection, errors and resuming after restart.
+4. **Test one complete process:** Use real model calls with approved inputs and comparable baseline and pilot observations, including review effort and rework.
+5. **Validate installation and access:** Check team roles, operation and recovery in the selected pilot environment.
 
-- Broader workflow execution and connector coverage.
-- More knowledge sources, source import and retrieval.
-- Better links between organisation design, runtime status and observed outcomes.
-- Clear packaging and component-level licence review before any source release.
+## Later extensions
 
-## How to influence the roadmap
+Further integrations, optional community GPU sharing and credits. Scope and priority follow concrete processes. Clear packaging and component-level licence review are required before any source release.
 
-Describe the work you need to accomplish, where today's process fails and how you would judge a better result. Use a [feature request](https://github.com/dajor/c9n/issues/new?template=feature.yml) or start a [discussion](https://github.com/dajor/c9n/discussions).
+## Help shape the roadmap
 
-We prefer a useful, testable outcome to a long integration checklist. Popularity alone is not evidence that a feature is ready or valuable for a specific team.
+Describe the task, intended agent step and decision a person must make. Use [Discussions](https://github.com/dajor/c9n/discussions) or a [feature request](https://github.com/dajor/c9n/issues/new?template=feature.yml).
+
+[Evidence](EVIDENCE.md) · [Deutsch](ROADMAP.de.md)

@@ -3,80 +3,43 @@
   <img src="docs/assets/c9n/logo.svg" alt="c9n" width="240" height="92">
 </picture>
 
-[Download the installer](https://c9n.app/en.html#download) · Application image supplied separately to pilot customers.
+### Build processes. Assign agent steps. People approve.
 
-### Design how people and AI work together. Prove what improves.
+c9n connects tasks in a shared process. Define the sequence, assign steps to agents and decide which results a person must review and approve.
 
-c9n helps teams turn an AI ambition into a shared operating model: map responsibilities, build workflows, review results and measure the effect on everyday work.
+**[Explore the product](https://c9n.app/product.en.html) · [Request a pilot](docs/PILOT.md) · [Deutsch](README.de.md)**
 
-**[Explore the product](https://c9n.app/en.html) · [Request a guided pilot](docs/PILOT.md) · [Deutsch](README.de.md) · [Join the discussion](https://github.com/dajor/c9n/discussions)**
+## Current product structure
 
-![c9n's interactive company landscape: people, AI roles and shared knowledge, with the selected role explained on the right.](docs/assets/company-landscape.png)
+1. **Process:** Define the goal, trigger, steps and permitted next paths.
+2. **Agent steps:** Assign an agent, task, inputs and expected result to each step. One agent can handle several steps; several agents can work together.
+3. **Human approval:** The assigned person reviews the result. Only their explicit approval allows the next defined step. Returning a result leads to rework and another review; rejection follows the defined path.
+4. **History:** Keep tasks, results, feedback and decisions in context.
 
-*Actual local prototype, September 2026. The six departments are an editable example; the pictured agents are planned roles, not running workers.*
+Agents, watchers, scripts, tests and people have different jobs. [Meet the actors](https://c9n.app/en.html#actors).
 
-## Start with the work your team wants to improve
+## Development status and boundaries
 
-A team wants faster answers. But who owns the reply? What information may the AI use? Who checks an exception? And does it actually reduce effort?
+The initial scope focuses on processes, agent steps and human approvals. Projects, Knowledge and Design are not separate product areas in the initial rebuild.
 
-c9n connects those questions in one journey:
+Existing Hub agent features provide the foundation. The current workflow editor generates agent instructions; this does not establish an engine that enforces every drawn step. The new process engine with enforced human pauses is being built and must be verified for each supported workflow. The website uses clearly marked illustrative examples.
 
-1. **Design the organisation.** Discuss today's process and the intended collaboration between people and AI. Explore departments, roles and handovers in a visual company map or editable process canvas.
-2. **Make the work repeatable.** Build automations in Standard or Advanced workflow editors. Choose supported providers and models per AI step, and put human review where it belongs.
-3. **Keep knowledge useful.** Capture notes, text PDFs and excerpts. Organise sources, review suggestions and turn approved knowledge into follow-up work.
-4. **Measure the change.** Record effort, review work and quality with their sources and time periods. Distinguish real observations from test data and targets.
+[Evidence and limitations](docs/EVIDENCE.md) · [Roadmap](docs/ROADMAP.md)
 
-## See the product
+## Start with one process
 
-| Company design | Workflows | Personal dashboard |
-| --- | --- | --- |
-| Explore people, AI roles, responsibilities and handovers. | Configure the automation and its review steps. | Find knowledge, decisions and your next action. |
-| [Company map](docs/assets/company-landscape.png) | [Workflow editor](docs/assets/workflow-editor.png) | [Dashboard](docs/assets/personal-dashboard.png) |
+One accountable person, a clear assignment and a traceable baseline. In a guided pilot, evaluate the supported workflow, human approvals, failures and rework. Then decide from the results: continue, change or stop.
 
-## Three ways to start
+**[Request a pilot](docs/PILOT.md)** · [Prepare the conversation](templates/pilot-brief.md) · [Measurement worksheet](templates/measurement.csv)
 
-- **[Turn ideas into useful knowledge](docs/use-cases/knowledge.md):** capture → organise → review → reuse.
-- **[Prepare marketing content with human approval](docs/use-cases/marketing.md):** brief → draft variants → compare → approve → export.
-- **[Design better customer handovers](docs/use-cases/customer-requests.md):** establish responsibilities and evidence before choosing what to automate.
+[Download the installer](https://c9n.app/download.en.html). Pilot customers receive the application image separately; the public package alone does not contain a runnable application.
 
-Marketing is one workflow among many. The platform's organising concepts are projects, design, knowledge, workflows and measurable impact.
+## Community and source code
 
-## What you can evaluate today
+This repository contains the public product website, documentation and community materials. Application source is currently private; this repository does not grant an open-source licence for the product. [Publication status](NOTICE.md).
 
-| Capability | Current evidence / boundary |
-| --- | --- |
-| Company landscape and process designer | Local browser checks cover selection, editing, saving, reload, presentation and mobile layout. |
-| Login, workspace and personal dashboard | Implemented in the private application; no public hosted trial is currently available. |
-| Notes and text PDFs | A bounded knowledge workflow supports capture, review, storage and follow-up tasks. |
-| Model connections | Provider adapters and step-level selection exist; availability depends on configuration and supported execution path. |
-| Standard / Advanced editors | Available in the prototype. Editing a graph does **not** imply every card or arbitrary graph is executable. |
-| Business impact | Source-backed manual measurements are supported. We have not published verified customer savings or ROI. |
-
-[Read the evidence and limitations](docs/EVIDENCE.md) · [See the roadmap](docs/ROADMAP.md)
-
-## A guided pilot, with a clear decision at the end
-
-Pick **one process**, agree on **one accountable owner**, record the baseline, run a supported workflow with human review, and compare the outcome. Decide to continue, change or stop based on the evidence.
-
-**[Request a pilot →](docs/PILOT.md)**
-
-Before a conversation, you can use the [pilot brief](templates/pilot-brief.md) and [measurement worksheet](templates/measurement.csv). They contain no promised savings or pre-filled customer results.
-
-## Build with the community
-
-- [Discussions](https://github.com/dajor/c9n/discussions): ask questions, share a non-confidential process or discuss the approach.
-- [Issues](https://github.com/dajor/c9n/issues/new/choose): report a reproducible problem or describe an improvement.
-- [Roadmap](docs/ROADMAP.md): see what is testable, what comes next and what is still open.
-- [Releases](https://github.com/dajor/c9n/releases): follow documented product updates.
-
-Keep customer details, API keys, prompts containing private data and commercial negotiations out of public issues and discussions. Pilot enquiries have a private contact route.
-
-## Repository scope
-
-This is the **public product and community hub**, including documentation, example blueprints and screenshots. The application source is currently private. This repository is not a self-hostable application release and does not grant an open-source licence for the product or its underlying components.
-
-c9n is the current working product name. [Contributing](CONTRIBUTING.md) · [Content and licence status](NOTICE.md)
+[Discussions](https://github.com/dajor/c9n/discussions) · [Issues](https://github.com/dajor/c9n/issues/new/choose) · [Releases](https://github.com/dajor/c9n/releases). Keep customer data, credentials and confidential assignments in a private pilot enquiry.
 
 ## Brand assets
 
-[c9n · Logos, icons, colors & typography](https://c9n.app/brand/) · [ZIP download](https://c9n.app/brand/c9n-brand-kit.zip)
+[c9n · Logos, icons, colors and typography](https://c9n.app/brand/) · [Download ZIP](https://c9n.app/brand/c9n-brand-kit.zip)

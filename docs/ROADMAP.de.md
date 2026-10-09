@@ -1,31 +1,31 @@
 # Öffentlicher Entwicklungsplan
 
-Dies ist unsere aktuelle Richtung, keine Zusage fester Liefertermine. Fragen und konkrete Anwendungsfälle helfen bei der Priorisierung.
+Stand: 9. Oktober 2026. Dies ist die aktuelle Richtung, keine Zusage fester Liefertermine.
 
-## Im lokalen Prototyp testbar
+## Erster Umfang: Prozesse, Agenten und Menschen
 
-- Räumliche Unternehmenslandkarte und separate Prozesszeichenfläche.
-- Heute/Zielbild, Rollenerklärungen und Verantwortlichkeiten.
-- Standard- und Advanced-Workflow-Editoren.
-- Begrenzter Wissensablauf: erfassen → prüfen → ablegen → Folgeaufgabe.
-- Persönliches Dashboard und manuelle Prozessmessung mit Quellen.
+- Prozesse aus klaren Aufgaben und Agentenschritten aufbauen.
+- Agenten mit Auftrag, Eingaben und erwartetem Ergebnis zuweisen.
+- Menschliche Freigaben als eigene Schritte mit einer zuständigen Person vorsehen.
+- Rückgabe zur Überarbeitung, erneute Prüfung, Ablehnung und Fehlerwege definieren.
+- Aufgaben, Ergebnisse und Entscheidungen im Prozessverlauf zusammenführen.
 
-## Nächste Nachweise
+Projekte, Wissen und Design sind vorerst keine eigenen Bereiche des Neuaufbaus.
 
-1. Den vollständigen Einstieg eines neuen Teams bis zum ersten unterstützten Workflow prüfen.
-2. Echte Modellaufrufe mit freigegebenen Eingaben testen und Fehlerfälle dokumentieren.
-3. Einen Prozess mit vergleichbaren Ausgangs- und Pilotmessungen bewerten, einschließlich Qualität und Prüfaufwand.
-4. Einen kurzen Produktrundgang mit synthetischen Daten, Versionsstand und Datum veröffentlichen.
-5. Hosting, Wiederherstellung, Zugangswiederherstellung und Support für die gewählte Pilotumgebung prüfen.
+## Nächste überprüfbare Etappen
 
-## Geplant; genauer Umfang noch offen
+1. **Agentenbasis übernehmen:** Bestehende Hub-Agentenfunktionen, Modellanbindung und lokale Rechenkapazität in einer gemeinsamen Installation bereitstellen und prüfen.
+2. **Prozessausführung aufbauen:** Definition, Lauf und Schrittzustände dauerhaft speichern. Der vorhandene Agenten-Ablaufeditor erzeugt Anweisungen; eine verbindliche Ausführung aller gezeichneten Schritte ist damit noch nicht nachgewiesen.
+3. **Menschliche Freigaben abnehmen:** Nachweislich anhalten, der zuständigen Person zuweisen und erst nach Freigabe fortsetzen. Überarbeitung, Ablehnung, Fehler und Fortsetzung nach Neustart prüfen.
+4. **Einen Prozess vollständig testen:** Echte Modellaufrufe mit freigegebenen Eingaben sowie vergleichbare Ausgangs- und Pilotmessungen einschließlich Prüfaufwand und Nacharbeit.
+5. **Installation und Zugänge prüfen:** Teamrollen, Betrieb und Wiederherstellung für die gewählte Pilotumgebung abnehmen.
 
-Weitere ausführbare Workflow-Schritte und Anbindungen, zusätzliche Wissensquellen, verbesserter Import und Suche sowie eine engere Verbindung zwischen Organisationsbild, Ausführungsstatus und beobachteten Ergebnissen.
+## Spätere Erweiterungen
 
-Vor einer Quellcode-Veröffentlichung stehen eine klare Paketierung und die Prüfung der Rechte und Lizenzen je Komponente an.
+Weitere Anbindungen sowie optionales Community-GPU-Sharing und Credits. Umfang und Priorität werden anhand konkreter Prozesse festgelegt. Vor einer Quellcode-Veröffentlichung stehen eine klare Paketierung und die Prüfung der Rechte und Lizenzen je Komponente an.
 
 ## Mitgestalten
 
-Beschreibe, welche Arbeit du erledigen möchtest, was heute im Weg steht und woran du eine Verbesserung erkennen würdest. Nutze [Discussions](https://github.com/dajor/c9n/discussions) oder einen [Verbesserungsvorschlag](https://github.com/dajor/c9n/issues/new?template=feature.yml).
+Beschreibe die Aufgabe, den vorgesehenen Agentenschritt und die Entscheidung, die ein Mensch treffen muss. Nutze [Discussions](https://github.com/dajor/c9n/discussions) oder einen [Verbesserungsvorschlag](https://github.com/dajor/c9n/issues/new?template=feature.yml).
 
-[English](ROADMAP.md)
+[Nachweise](EVIDENCE.de.md) · [English](ROADMAP.md)

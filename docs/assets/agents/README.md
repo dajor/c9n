@@ -16,7 +16,11 @@ filter is omitted for small, predictable web rendering.
 watcher to agent to script to test to human for 4.8 seconds once the scene
 enters view. Each explanatory portrait also plays a 3.2-second action once:
 Fink writes, Bruno checks the clock, Kalle uses a tool, Luma checks the result,
-and the human nods and approves. Text and names stay still. `dots.js` starts
-each portrait independently and pauses scenes outside the viewport and in hidden tabs. Reduced motion and disabled JavaScript show
-the same readable static poses. The scene represents an example, not live
+and the human nods and approves. Gentle swaying and occasional blinking keep
+the characters friendly afterwards; Luma adds a small wave and the human nods.
+The whole character moves together above a softly changing ground shadow.
+Text and names stay still. Two synchronized pause/resume controls apply to all
+figures. `dots.js` starts each portrait independently and pauses scenes outside
+the viewport and in hidden tabs. Reduced motion and disabled JavaScript show
+the same readable static poses and hide the motion controls. The scene represents an example, not live
 agent activity.

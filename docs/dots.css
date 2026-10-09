@@ -1,4 +1,4 @@
-/* Hub actor types, one short handoff from watcher through human approval. */
+/* Hub actors: a short explanatory handoff and gentle, pausable character motion. */
 .hero-with-dots { max-width: none; }
 .hero-bottom { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 48px; align-items: center; }
 .hero-description { min-width: 0; }
@@ -15,6 +15,37 @@
 .dots-scene figcaption strong { display: block; font-size: 12px; font-weight: 600; color: #314f3d; }
 .dots-scene figcaption span { display: block; margin-top: 4px; font-size: 11px; color: #52644f; }
 .dots-handoff { opacity: 0; }
+/* easeInOutSine from https://easings.co/js/easing.js keeps the idle sway soft. */
+.dot-colleague, .actor-portrait { --friendly-duration: 4.8s; --friendly-delay: 0s; --friendly-ease: cubic-bezier(.445, .05, .55, .95); }
+:is(.dot-colleague, .actor-portrait).dot-bruno { --friendly-duration: 5.6s; --friendly-delay: .08s; }
+:is(.dot-colleague, .actor-portrait).dot-kalle { --friendly-duration: 5.2s; --friendly-delay: .16s; }
+:is(.dot-colleague, .actor-portrait).dot-luma { --friendly-duration: 6s; --friendly-delay: .24s; }
+:is(.dot-colleague, .actor-portrait).dot-human { --friendly-duration: 6.4s; --friendly-delay: .32s; }
+.friendly-character { transform-box: view-box; transform-origin: 60px 132px; }
+.dot-human .friendly-character { transform-origin: 60px 108px; }
+.eyes-blink, .character-shadow { transform-box: fill-box; transform-origin: center; }
+:is(.dots-scene, .actor-portrait):is([data-motion="playing"], [data-motion="done"]) .friendly-character { animation: friendly-sway var(--friendly-duration) var(--friendly-ease) var(--friendly-delay) infinite; }
+:is(.dots-scene, .actor-portrait):is([data-motion="playing"], [data-motion="done"]) .eyes-blink { animation: friendly-blink 6.4s linear var(--friendly-delay) infinite; }
+:is(.dots-scene, .actor-portrait):is([data-motion="playing"], [data-motion="done"]) .character-shadow { animation: friendly-shadow var(--friendly-duration) var(--friendly-ease) var(--friendly-delay) infinite; }
+.dots-scene[data-motion="done"] .dot-luma .arm.l, .actor-portrait.dot-luma[data-motion="done"] .arm.l { transform-box: fill-box; transform-origin: 70% 12%; animation: friendly-wave 6s cubic-bezier(.77, 0, .175, 1) infinite; }
+.dots-scene[data-motion="done"] .dot-human .human-head, .actor-portrait.dot-human[data-motion="done"] .human-head { animation: friendly-nod 6.4s cubic-bezier(.77, 0, .175, 1) infinite; }
+@keyframes friendly-sway {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  25% { transform: translateY(-4px) rotate(-2deg); }
+  50% { transform: translateY(-7px) rotate(1.5deg); }
+  75% { transform: translateY(-3px) rotate(2deg); }
+}
+@keyframes friendly-shadow { 0%, 100% { transform: scaleX(1); opacity: 1; } 50% { transform: scaleX(.9); opacity: .75; } }
+@keyframes friendly-blink { 0%, 38%, 42%, 76%, 80%, 100% { transform: scaleY(1); } 40%, 78% { transform: scaleY(.12); } }
+@keyframes friendly-wave { 0%, 30%, 70%, 100% { transform: rotate(0); } 40%, 60% { transform: rotate(30deg) translate(2px, -4px); } 50% { transform: rotate(45deg) translate(2px, -7px); } }
+@keyframes friendly-nod { 0%, 30%, 70%, 100% { transform: translateY(0); } 45%, 60% { transform: translateY(3px); } }
+.dots-controls { margin: 12px 0 0; gap: 12px; }
+.dots-controls[hidden] { display: none; }
+.dots-motion-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 1px solid #c7d3bf; border-radius: 7px; background: transparent; color: #415b48; font: inherit; font-size: 12px; line-height: 1.4; cursor: pointer; }
+.dots-motion-toggle:focus-visible { outline: 3px solid #71953b; outline-offset: 4px; }
+.dots-control-play, .dots-motion-toggle[data-paused] .dots-control-pause { display: none; }
+.dots-motion-toggle[data-paused] .dots-control-play { display: block; }
+@media (hover: hover) and (pointer: fine) { .dots-motion-toggle:hover { background: #edf1e6; border-color: #8a9e7a; } }
 :is(.dot-art, .actor-art) :is(.eyes, .body-g, .lens, .wrench, .human-head, .human-approval) { transform-box: fill-box; transform-origin: center; }
 :is(.dot-art, .actor-art) .body-g { transform-origin: 50% 100%; }
 :is(.dot-art, .actor-art) .arm { transform-box: fill-box; }
@@ -57,7 +88,7 @@
 .actor-list { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; margin-top: 40px; }
 .actor-explanation { min-width: 0; }
 .actor-portrait { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
-.actor-art { display: block; flex: 0 0 auto; width: 72px; height: 84px; overflow: visible; }
+.actor-art { display: block; flex: 0 0 auto; width: 96px; height: 112px; overflow: visible; }
 .actor-portrait > span { font-size: 12px; line-height: 1.4; color: #52644f; }
 /* Short role-specific actions run independently as each portrait comes into view. */
 .actor-portrait[data-motion="playing"] .actor-art { --actor-ease: cubic-bezier(.77, 0, .175, 1); }

@@ -1,10 +1,21 @@
-// Inline artwork remains readable without JS. Each visible scene plays once.
+// Inline artwork stays readable without JS. Role actions play once; idle motion is pausable.
 (() => {
   'use strict';
   const scenes = [...document.querySelectorAll('[data-dots-scene], [data-actor-scene]')];
   if (!scenes.length) return;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const visible = new Set();
+  const controls = [...document.querySelectorAll('[data-dots-toggle]')];
+  let userPaused = false;
+
+  function updateControls() {
+    controls.forEach(control => {
+      control.closest('.dots-controls').hidden = reducedMotion.matches;
+      control.toggleAttribute('data-paused', userPaused);
+      control.querySelector('[data-dots-label]').textContent = userPaused
+        ? control.dataset.playLabel : control.dataset.pauseLabel;
+    });
+  }
 
   function update(scene) {
     if (reducedMotion.matches) {
@@ -12,7 +23,7 @@
       scene.removeAttribute('data-paused');
       return;
     }
-    const paused = document.hidden || !visible.has(scene);
+    const paused = userPaused || document.hidden || !visible.has(scene);
     scene.toggleAttribute('data-paused', paused);
     if (!paused && scene.dataset.motion === 'still') scene.dataset.motion = 'playing';
   }
@@ -25,6 +36,12 @@
       }
     });
   });
+  controls.forEach(control => control.addEventListener('click', () => {
+    userPaused = !userPaused;
+    updateControls();
+    scenes.forEach(update);
+  }));
+  updateControls();
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -38,5 +55,8 @@
     scenes.forEach(scene => { visible.add(scene); update(scene); });
   }
   document.addEventListener('visibilitychange', () => scenes.forEach(update));
-  reducedMotion.addEventListener('change', () => scenes.forEach(update));
+  reducedMotion.addEventListener('change', () => {
+    updateControls();
+    scenes.forEach(update);
+  });
 })();

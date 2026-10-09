@@ -125,3 +125,43 @@ header nav{align-items:center}.language-switch{display:inline-flex;align-items:c
 .copy-status{min-height:1.2em;font-size:14px;color:#47692a;margin:8px 0 0}
 .example-notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin:36px 0;max-width:980px}.example-notes li{margin-bottom:8px}
 .example-notes dl{display:grid;grid-template-columns:max-content 1fr;gap:8px 18px}.example-notes dt{font-weight:600}.example-notes dd{margin:0}
+
+/* Shared footer: keep complete link labels in aligned columns. */
+.site-footer {
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+  align-items: start;
+  justify-content: normal;
+  gap: 12px 64px;
+}
+.site-footer > .logo, .site-footer > p { grid-column: 1; }
+.site-footer > p { margin: 0; max-width: 240px; font-size: 12px; }
+.site-footer > nav {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(max-content, 1fr));
+  gap: 4px 24px;
+  min-width: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.site-footer nav a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  white-space: nowrap;
+}
+.site-footer nav a:hover { text-decoration: underline; }
+.site-footer nav .site-version { grid-column: 1 / -1; white-space: normal; }
+@media (max-width: 1050px) {
+  .site-footer { grid-template-columns: minmax(0, 1fr); }
+  .site-footer > p { max-width: none; }
+  .site-footer > nav { grid-column: 1; grid-row: auto; width: 100%; }
+}
+@media (max-width: 650px) {
+  .site-footer > nav {
+    grid-template-columns: repeat(2, minmax(max-content, 1fr));
+    column-gap: 16px;
+  }
+}

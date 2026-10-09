@@ -61,6 +61,18 @@
 .dots-scene[data-motion="playing"] .dot-luma .lens { animation: dots-check 1.2s cubic-bezier(.77, 0, .175, 1) 1 2.8s; }
 .dots-scene[data-motion="playing"] .dot-human .human-head { animation: actor-nod .8s cubic-bezier(.77, 0, .175, 1) 1 4s; }
 .dots-scene[data-motion="playing"] .dot-human .human-approval { animation: actor-approve .6s cubic-bezier(.77, 0, .175, 1) 1 4.2s both; }
+.dots-scene[data-motion="playing"] .hero-incoming { animation: hero-incoming 4.8s cubic-bezier(.23, 1, .32, 1) both; }
+.dots-scene[data-motion="playing"] .dot-fink .paper .ln1 { animation: hero-draft-one 4.8s linear both; }
+.dots-scene[data-motion="playing"] .dot-fink .paper .ln2 { animation: hero-draft-two 4.8s linear both; }
+.dots-scene[data-motion="playing"] .dot-fink .paper .ln3 { animation: hero-draft-three 4.8s linear both; }
+.dots-scene[data-motion="playing"] .dot-kalle .export-package { animation: hero-package 4.8s cubic-bezier(.23, 1, .32, 1) both; }
+.dots-scene[data-motion="playing"] .dot-luma .test-pass { animation: hero-test-result 4.8s linear both; }
+@keyframes hero-incoming { 0% { opacity: 0; transform: translateY(-6px); } 10%, 100% { opacity: 1; transform: translateY(0); } }
+@keyframes hero-draft-one { 0%, 20% { opacity: .15; } 26%, 100% { opacity: 1; } }
+@keyframes hero-draft-two { 0%, 26% { opacity: .15; } 33%, 100% { opacity: 1; } }
+@keyframes hero-draft-three { 0%, 33% { opacity: .15; } 40%, 100% { opacity: 1; } }
+@keyframes hero-package { 0%, 42% { opacity: .2; transform: translateY(3px) scale(.95); } 58%, 100% { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes hero-test-result { 0%, 70% { opacity: 0; } 80%, 100% { opacity: 1; } }
 :is(.dots-scene, .actor-portrait)[data-paused] * { animation-play-state: paused !important; }
 @keyframes dots-handoff {
   0%, 6% { opacity: 0; transform: translate(0, 0); }
@@ -87,24 +99,55 @@
 .actors-heading > p { margin: 0; max-width: 52ch; font-size: 17px; }
 .actor-list { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; margin-top: 40px; }
 .actor-explanation { min-width: 0; }
-.actor-portrait { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
-.actor-art { display: block; flex: 0 0 auto; width: 96px; height: 112px; overflow: visible; }
+.actor-portrait { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 20px; --actor-duration: 5.2s; --actor-ease: cubic-bezier(.77, 0, .175, 1); --actor-reveal-ease: cubic-bezier(.23, 1, .32, 1); }
+.actor-art { display: block; flex: 0 0 auto; width: 100%; max-width: 200px; height: auto; aspect-ratio: 200 / 168; overflow: visible; }
 .actor-portrait > span { font-size: 12px; line-height: 1.4; color: #52644f; }
-/* Short role-specific actions run independently as each portrait comes into view. */
-.actor-portrait[data-motion="playing"] .actor-art { --actor-ease: cubic-bezier(.77, 0, .175, 1); }
-.actor-portrait.dot-fink[data-motion="playing"] .arm.r { animation: actor-write 3.2s var(--actor-ease) both; }
-.actor-portrait.dot-fink[data-motion="playing"] .paper .ln1 { animation: actor-line 3.2s var(--actor-ease) both; }
-.actor-portrait.dot-fink[data-motion="playing"] .paper .ln2 { animation: actor-line-two 3.2s var(--actor-ease) both; }
-.actor-portrait.dot-fink[data-motion="playing"] .paper .ln3 { animation: actor-line-three 3.2s var(--actor-ease) both; }
-.actor-portrait.dot-bruno[data-motion="playing"] .watch-hand { animation: actor-clock 3.2s var(--actor-ease) both; }
-.actor-portrait.dot-bruno[data-motion="playing"] .eyes { animation: actor-look 3.2s var(--actor-ease) both; }
-.actor-portrait.dot-kalle[data-motion="playing"] .wrench { animation: actor-tool 3.2s var(--actor-ease) both; }
+.actor-action-caption { display: block; font-size: 11px; line-height: 1.5; color: #638165; margin-top: 5px; }
+/* Input → work → result: each story runs once on entry or deliberate replay. */
+.actor-brief, .actor-thoughts, .actor-files, .actor-review-focus, .actor-review-pointer { opacity: 0; }
+.actor-workspace :is(.actor-draft, .actor-package, .human-approval) { transform-box: fill-box; transform-origin: center; }
+.actor-workspace :is(.actor-draft-one, .actor-draft-two, .actor-draft-three) { transform-box: fill-box; transform-origin: left center; }
+.actor-portrait.dot-fink[data-motion="playing"] .arm.r { animation: actor-write var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait.dot-fink[data-motion="playing"] .paper .ln1 { animation: actor-line var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait.dot-fink[data-motion="playing"] .paper .ln2 { animation: actor-line-two var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait.dot-fink[data-motion="playing"] .paper .ln3 { animation: actor-line-three var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-brief { animation: actor-brief var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-thoughts { animation: actor-thinking var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-thought-two { animation: actor-thought var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-thought-three { animation: actor-thought-last var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-draft { animation: actor-draft var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-draft-one { animation: actor-draft-one var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-draft-two { animation: actor-draft-two var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-draft-three { animation: actor-draft-three var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait.dot-bruno[data-motion="playing"] .watch-hand { animation: actor-clock var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait.dot-bruno[data-motion="playing"] .eyes { animation: actor-look var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-incoming { animation: actor-incoming var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-notification { animation: actor-notification var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-signal-one { animation: actor-signal-one var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-signal-two { animation: actor-signal-two var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-signal-three { animation: actor-signal-three var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-awake { animation: actor-awake var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-awake-eyes { animation: actor-awake-eyes var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait.dot-kalle[data-motion="playing"] .wrench { animation: actor-tool var(--actor-duration) var(--actor-ease) both; }
 .actor-portrait.dot-kalle[data-motion="playing"] .arm.r { animation: dots-tool .8s var(--actor-ease) 3 .2s; }
-.actor-portrait.dot-luma[data-motion="playing"] .lens { animation: actor-check 3.2s var(--actor-ease) both; }
-.actor-portrait.dot-luma[data-motion="playing"] .eyes { animation: actor-look 3.2s var(--actor-ease) both; }
-.actor-portrait.dot-luma[data-motion="playing"] .test-pass { animation: actor-result 3.2s var(--actor-ease) both; }
-.actor-portrait.dot-human[data-motion="playing"] .human-head { animation: actor-nod 3.2s var(--actor-ease) both; }
-.actor-portrait.dot-human[data-motion="playing"] .human-approval { animation: actor-approve 3.2s var(--actor-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-files { animation: actor-files var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-file-one { animation: actor-file-one var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-file-two { animation: actor-file-two var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-file-three { animation: actor-file-three var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-package { animation: actor-package var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-package-lid { animation: actor-package-lid var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-package-seal { animation: actor-package-seal var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait.dot-luma[data-motion="playing"] .lens { animation: actor-check var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait.dot-luma[data-motion="playing"] .eyes { animation: actor-look var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-check-one { animation: actor-check-one var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-check-two { animation: actor-check-two var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-check-three { animation: actor-check-three var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-test-result { animation: actor-result var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait.dot-human[data-motion="playing"] .human-head { animation: actor-nod var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait.dot-human[data-motion="playing"] .human-approval { animation: actor-approve var(--actor-duration) var(--actor-reveal-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-review-focus { animation: actor-review-focus var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-review-pointer { animation: actor-review-pointer var(--actor-duration) var(--actor-ease) both; }
+.actor-portrait[data-motion="playing"] .actor-signature { animation: actor-signature var(--actor-duration) var(--actor-reveal-ease) both; }
 @keyframes actor-write {
   0%, 15%, 35%, 55%, 75%, 100% { transform: rotate(25deg) translate(-14px, -10px); }
   25%, 45%, 65% { transform: rotate(35deg) translate(-18px, -7px); }
@@ -115,10 +158,38 @@
 @keyframes actor-clock { 0%, 10% { transform: rotate(0); } 35%, 45% { transform: rotate(120deg); } 65%, 75% { transform: rotate(240deg); } 95%, 100% { transform: rotate(360deg); } }
 @keyframes actor-look { 0%, 100% { transform: translate(0, 0); } 25%, 55% { transform: translate(3px, 2px); } 75% { transform: translate(-2px, 1px); } }
 @keyframes actor-tool { 0%, 15%, 40%, 65%, 100% { transform: rotate(0); } 25%, 50%, 75% { transform: rotate(-18deg); } }
-@keyframes actor-check { 0%, 15%, 100% { transform: translate(0, 0); } 35% { transform: translate(-14px, -5px); } 60%, 75% { transform: translate(-8px, 7px); } }
-@keyframes actor-result { 0%, 65% { opacity: 0; } 85%, 100% { opacity: 1; } }
-@keyframes actor-nod { 0%, 35%, 75%, 100% { transform: translateY(0); } 55% { transform: translateY(4px); } }
-@keyframes actor-approve { 0%, 55% { opacity: 0; transform: translateY(6px) scale(.85); } 85%, 100% { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes actor-check { 0%, 10%, 100% { transform: translate(0, 0); } 25%, 35% { transform: translate(52px, -45px); } 50%, 58% { transform: translate(52px, -18px); } 72%, 80% { transform: translate(52px, 9px); } }
+@keyframes actor-result { 0%, 80% { opacity: 0; transform: translateY(3px); } 94%, 100% { opacity: 1; transform: translateY(0); } }
+@keyframes actor-nod { 0%, 55%, 90%, 100% { transform: translateY(0); } 72%, 80% { transform: translateY(4px); } }
+@keyframes actor-approve { 0%, 68% { opacity: 0; transform: translateY(6px) scale(.95); } 90%, 100% { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes actor-brief { 0% { opacity: 0; transform: translateY(-10px); } 12%, 24% { opacity: 1; transform: translateY(0); } 36%, 100% { opacity: 0; transform: translateY(16px); } }
+@keyframes actor-thinking { 0%, 12%, 64%, 100% { opacity: 0; } 22%, 50% { opacity: 1; } }
+@keyframes actor-thought { 0%, 18%, 50%, 100% { transform: translateY(0); } 28%, 40% { transform: translateY(-3px); } }
+@keyframes actor-thought-last { 0%, 28%, 58%, 100% { transform: translateY(0); } 38%, 48% { transform: translateY(-3px); } }
+@keyframes actor-draft { 0%, 22% { opacity: 0; transform: translateY(8px) scale(.95); } 38%, 100% { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes actor-draft-one { 0%, 32% { opacity: 0; transform: scaleX(.95); } 48%, 100% { opacity: 1; transform: scaleX(1); } }
+@keyframes actor-draft-two { 0%, 46% { opacity: 0; transform: scaleX(.95); } 64%, 100% { opacity: 1; transform: scaleX(1); } }
+@keyframes actor-draft-three { 0%, 62% { opacity: 0; transform: scaleX(.95); } 80%, 100% { opacity: 1; transform: scaleX(1); } }
+@keyframes actor-incoming { 0% { opacity: 0; transform: translateY(-10px); } 22%, 100% { opacity: 1; transform: translateY(0); } }
+@keyframes actor-notification { 0%, 20% { opacity: 0; transform: translateY(-3px); } 32%, 48%, 100% { opacity: 1; transform: translateY(0); } 40% { opacity: .6; transform: translateY(-2px); } }
+@keyframes actor-signal-one { 0%, 38% { opacity: 0; } 48%, 100% { opacity: 1; } }
+@keyframes actor-signal-two { 0%, 46% { opacity: 0; } 56%, 100% { opacity: 1; } }
+@keyframes actor-signal-three { 0%, 54% { opacity: 0; } 64%, 100% { opacity: 1; } }
+@keyframes actor-awake { 0%, 55% { opacity: .35; transform: translateY(5px); } 75%, 100% { opacity: 1; transform: translateY(0); } }
+@keyframes actor-awake-eyes { 0%, 55% { opacity: .1; } 70%, 100% { opacity: 1; } }
+@keyframes actor-files { 0%, 16%, 68%, 100% { opacity: 0; } 26%, 54% { opacity: 1; } }
+@keyframes actor-file-one { 0%, 30% { transform: translate(0, 0); } 58%, 100% { transform: translate(23px, 28px); } }
+@keyframes actor-file-two { 0%, 38% { transform: translate(0, 0); } 60%, 100% { transform: translate(1px, 28px); } }
+@keyframes actor-file-three { 0%, 46% { transform: translate(0, 0); } 66%, 100% { transform: translate(-21px, 28px); } }
+@keyframes actor-package { 0%, 44% { opacity: .45; transform: translateY(5px); } 70%, 100% { opacity: 1; transform: translateY(0); } }
+@keyframes actor-package-lid { 0%, 64% { transform: translateY(-9px); } 82%, 100% { transform: translateY(0); } }
+@keyframes actor-package-seal { 0%, 78% { opacity: 0; } 92%, 100% { opacity: 1; } }
+@keyframes actor-check-one { 0%, 28% { opacity: 0; } 40%, 100% { opacity: 1; } }
+@keyframes actor-check-two { 0%, 52% { opacity: 0; } 64%, 100% { opacity: 1; } }
+@keyframes actor-check-three { 0%, 74% { opacity: 0; } 84%, 100% { opacity: 1; } }
+@keyframes actor-review-focus { 0%, 16% { opacity: 0; transform: translateY(0); } 22%, 34% { opacity: .35; transform: translateY(0); } 46%, 54% { opacity: .35; transform: translateY(16px); } 66%, 72% { opacity: .35; transform: translateY(32px); } 84%, 100% { opacity: 0; transform: translateY(32px); } }
+@keyframes actor-review-pointer { 0%, 16% { opacity: 0; transform: translateY(0); } 22%, 34% { opacity: 1; transform: translateY(0); } 46%, 54% { opacity: 1; transform: translateY(16px); } 66%, 72% { opacity: 1; transform: translateY(32px); } 84%, 100% { opacity: 0; transform: translateY(32px); } }
+@keyframes actor-signature { 0%, 70% { opacity: 0; } 88%, 100% { opacity: 1; } }
 .actor-description { padding-top: 20px; border-top: 1px solid #c7d3bf; }
 .actor-description h3 { margin: 0 0 12px; font-size: 22px; font-weight: 600; letter-spacing: -.02em; }
 .actor-description > p { margin: 0; font-size: 14px; line-height: 1.7; }
@@ -141,9 +212,8 @@
   .hero-bottom { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 28px; }
   .dots-stage { padding-inline: 10px; }
   .actor-list { grid-template-columns: 1fr; gap: 0; }
-  .actor-explanation { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 28px; padding: 24px 0; border-top: 1px solid #d9e0d4; }
-  .actor-portrait { flex-direction: column; gap: 5px; margin: 0; }
-  .actor-art { width: 96px; height: 112px; }
+  .actor-explanation { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 28px; padding: 24px 0; border-top: 1px solid #d9e0d4; }
+  .actor-portrait { align-items: center; gap: 12px; margin: 0; }
   .actor-description { padding: 0; border: 0; }
   .actor-description > p { max-width: 65ch; }
 }
@@ -159,9 +229,9 @@
   .actors-heading { grid-template-columns: 1fr; gap: 20px; }
   .actors-heading > p { font-size: 15px; }
   .actor-list { margin-top: 28px; }
-  .actor-explanation { grid-template-columns: 78px minmax(0, 1fr); gap: 20px; }
-  .actor-art { width: 78px; height: 91px; }
-  .actor-portrait > span { font-size: 11px; text-align: center; }
+  .actor-explanation { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .actor-portrait { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center; gap: 16px; }
+  .actor-portrait > span { font-size: 12px; }
   .actor-description h3 { font-size: 21px; }
   .actors-workflow { margin-top: 20px; padding: 24px; }
   .actors-process-copy { grid-template-columns: 1fr; gap: 16px; }

@@ -13,7 +13,7 @@ class Page(HTMLParser):
   if tag=='a' and 'href' in a:self.links.append(a['href'])
   if tag=='a' and 'data-language' in a:self.language.append(a['href'])
   if tag=='link' and a.get('rel')=='canonical':self.canonical.append(a['href'])
-names=['index.html','en.html']+[p+s+'.html' for p in ['product','evidence','community','download','contact'] for s in ['', '.en']]
+names=['index.html','en.html','beispiele.html','examples.en.html']+[p+s+'.html' for p in ['product','architecture','evidence','community','download','contact'] for s in ['', '.en']]
 for name in names:
  path=root/name;p=Page(path)
  assert p.h1==1,(name,'heading count',p.h1)
@@ -28,4 +28,4 @@ for name in names:
   if u.fragment and target.suffix=='.html':assert unquote(u.fragment) in Page(target).ids,(name,href,'missing section')
  for section in ['community','contact','download','product','evidence']:
   if name in ['index.html','en.html']:assert section not in p.ids,(name,'homepage still contains',section)
-print('12 pages: headings, language switches, canonical URLs and section links passed.')
+print(f'{len(names)} pages: headings, language switches, canonical URLs and section links passed.')

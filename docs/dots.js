@@ -1,7 +1,7 @@
-// The artwork is already in the HTML. Enhancement adds a single, bounded scene.
+// Inline artwork remains readable without JS. Each visible scene plays once.
 (() => {
   'use strict';
-  const scenes = [...document.querySelectorAll('[data-dots-scene]')];
+  const scenes = [...document.querySelectorAll('[data-dots-scene], [data-actor-scene]')];
   if (!scenes.length) return;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const visible = new Set();
@@ -19,8 +19,10 @@
 
   scenes.forEach(scene => {
     scene.addEventListener('animationend', event => {
-      // The handoff owns the scene's 4.8-second clock; limb animations finish earlier.
-      if (event.animationName === 'dots-handoff') scene.dataset.motion = 'done';
+      // The handoff ends the hero; the portrait's main action ends its own scene.
+      if (event.animationName === 'dots-handoff' || event.target.hasAttribute('data-motion-end')) {
+        scene.dataset.motion = 'done';
+      }
     });
   });
   if ('IntersectionObserver' in window) {

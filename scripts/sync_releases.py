@@ -4,6 +4,7 @@ import html
 import json
 import re
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -104,7 +105,7 @@ def public_releases(payload):
 
 
 def date_label(timestamp, lang):
-    date = datetime.fromisoformat(timestamp.replace('Z', '+00:00'))
+    date = datetime.fromisoformat(timestamp.replace('Z', '+00:00')).astimezone(ZoneInfo('Europe/Berlin'))
     return date.strftime('%d.%m.%Y' if lang == 'de' else '%d %b %Y')
 
 
@@ -127,6 +128,15 @@ def generated_files(releases, notes):
     latest = releases[0]
     version = latest['version']
     files = {DOCS / release['notes']: notes[release['version']] for release in releases}
+    translations = {}
+    for release in releases:
+        translated_path = DOCS / 'releases' / (release['version'] + '.en.md')
+        if translated_path.exists():
+            translated = translated_path.read_text()
+            if not translated.startswith('# c9n ' + release['version'] + '\n'):
+                raise ValueError('Wrong translation version: ' + release['version'])
+            translations[release['version']] = translated
+            files[translated_path] = translated
     files[DOCS / 'release-data.json'] = json.dumps({'releases': releases}, ensure_ascii=False, indent=2) + '\n'
     for path in sorted(DOCS.glob('*.html')):
         text = path.read_text()
@@ -138,8 +148,12 @@ def generated_files(releases, notes):
         version_link = f'<a class="site-version" data-site-version href="{page}#v{version}">c9n {version}{preview} · Release Notes</a>'
         text = re.sub(r'<a class="site-version" data-site-version[^>]*>.*?</a>', lambda _: version_link, text)
         if path.name == page:
-            current = notes_article(latest, notes[version], lang, True)
-            history = ''.join(notes_article(release, notes[release['version']], lang, False) for release in releases[1:])
+            def render_release(release, current):
+                translated = translations.get(release['version']) if lang == 'en' else None
+                localized = {**release, 'notes': 'releases/' + release['version'] + '.en.md', 'notes_language': 'en'} if translated else release
+                return notes_article(localized, translated or notes[release['version']], lang, current)
+            current = render_release(latest, True)
+            history = ''.join(render_release(release, False) for release in releases[1:])
             generated = (current + '<section class="release-history-section" aria-labelledby="history-title"><h2 id="history-title">'
                          + ('Frühere Versionen' if lang == 'de' else 'Previous releases') + '</h2>' + history + '</section>')
             text = re.sub(r'<!-- release-content:start -->.*?<!-- release-content:end -->', lambda _: '<!-- release-content:start -->' + generated + '<!-- release-content:end -->', text, flags=re.S)

@@ -88,3 +88,32 @@
   .pc-photo .pc-paper img { height: 200px; }
   .pc-cut-a, .pc-cut-c { opacity: .9; }
 }
+/* Process examples (Beispiele): collage index and step chips coloured by actor type. */
+.pc-index .pc-board { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 22px; }
+.pc-index .pc-note .pc-paper { min-height: 170px; display: flex; flex-direction: column; gap: 10px; }
+.pc-index .pc-note a { color: inherit; text-decoration: none; }
+.pc-index .pc-note a:hover .pc-title, .pc-index .pc-note a:focus-visible .pc-title { text-decoration: underline; }
+.pc-title { font-size: 18px; font-weight: 650; line-height: 1.25; }
+.pc-dots { display: flex; gap: 6px; margin-top: auto; }
+.pc-dots i { width: 14px; height: 14px; border-radius: 50%; border: 2px solid #173e33; }
+.pc-index .pc-tape { background: var(--tape, rgba(242,194,75,.85)); }
+.proc-example { margin: 48px 0 0; padding-top: 32px; border-top: 2px dashed #d7e0d7; max-width: 980px; }
+.proc-example h2 { margin: 0 0 18px; }
+.proc-flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin: 0 0 24px; padding: 0; list-style: none; counter-reset: step; }
+.proc-flow li { position: relative; padding: 12px 12px 14px; border: 1px solid #d9e0d4; border-top: 5px solid var(--a); border-radius: 10px; background: #fff; }
+.proc-flow li:not(:last-child)::after { content: "→"; position: absolute; right: -11px; top: 50%; transform: translateY(-50%); z-index: 1; width: 20px; height: 20px; line-height: 20px; text-align: center; font-size: 13px; color: #173e33; background: #f6f5ee; border-radius: 50%; }
+.proc-flow span { display: block; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #52644f; }
+.proc-flow strong { display: block; margin-top: 4px; font-size: 14px; line-height: 1.35; }
+.a-waechter { --a: #f2c24b; } .a-agent { --a: #3d7bf0; } .a-skript { --a: #44b6bd; } .a-test { --a: #58c79c; } .a-mensch { --a: #b58ad6; }
+.proc-facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 10px 22px; margin: 0 0 18px; }
+.proc-facts dt { font-weight: 650; }
+.proc-facts dd { margin: 0; }
+.proc-links { margin: 0; }
+.proc-closing { margin: 48px 0 0; max-width: 980px; }
+@media (max-width: 860px) {
+  .pc-index .pc-board { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .proc-flow { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .proc-flow li:not(:last-child)::after { content: "↓"; right: auto; left: 50%; top: auto; bottom: -17px; transform: translateX(-50%); }
+  .proc-facts { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .proc-facts dd { margin-bottom: 10px; }
+}

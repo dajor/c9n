@@ -118,3 +118,25 @@
   .proc-facts dd { margin-bottom: 10px; }
 }
 .proc-stand { margin: 40px 0 0; max-width: 980px; font-size: 14px; line-height: 1.6; color: #52644f; }
+/* Hero: status badge and one real product screen. */
+.status-badge { display: inline-block; margin: 18px 0 6px; padding: 6px 14px; border: 1px solid #b9c9b4; border-radius: 999px; background: #edf1e6; font-size: 13px; line-height: 1.4; color: #173e33; }
+.status-badge strong { font-weight: 700; }
+.app-shot { margin: 40px 0 8px; max-width: 1100px; }
+.app-shot h2 { margin: 0 0 16px; }
+.app-shot picture, .app-shot img { display: block; width: 100%; height: auto; }
+.app-shot img { border: 1px solid #cfd8cf; border-radius: 14px; box-shadow: 0 10px 30px rgba(23,62,51,.14); }
+.app-shot figcaption { margin: 12px 2px 0; font-size: 13px; line-height: 1.55; color: #52644f; }
+/* Cost calculator with your own numbers. */
+.calc { margin: 28px 0 24px; padding: 22px 22px 18px; max-width: 980px; border: 1px solid #d9e0d4; border-radius: 14px; background: #fff; }
+.calc h3 { margin: 0 0 6px; }
+.calc > p { margin: 0 0 16px; font-size: 14px; color: #52644f; }
+.calc fieldset { margin: 0 0 14px; padding: 0; border: 0; min-width: 0; }
+.calc legend { padding: 0; margin-bottom: 8px; font-weight: 650; font-size: 14px; }
+.calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px 16px; margin-bottom: 14px; }
+.calc label { display: block; font-size: 13px; line-height: 1.35; font-weight: 600; }
+.calc input { display: block; width: 100%; min-height: 44px; margin-top: 4px; padding: 8px 10px; font: inherit; box-sizing: border-box; }
+.calc input[aria-invalid="true"] { outline: 2px solid #c0392b; }
+.calc-result { padding: 14px 16px; border-radius: 10px; background: #edf1e6; }
+.calc-result p { margin: 4px 0; }
+.calc-result span { display: inline-block; min-width: 4.5rem; font-weight: 650; }
+.calc-diff { font-weight: 650; }

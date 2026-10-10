@@ -1,0 +1,26 @@
+/* Isometric process figure and kinetic hero headline. Default state is the finished picture;
+   motion only runs when JS marks the scene as playing and the visitor allows motion. */
+.flow-scene { margin: 28px 0 8px; padding: 18px 12px 10px; background: #edf1e6; border-radius: 16px; }
+.flow-art { display: block; width: 100%; height: auto; overflow: visible; }
+.flow-link { stroke: #173e33; stroke-opacity: .45; stroke-width: 3; stroke-linecap: round; fill: none; }
+.flow-loop { stroke: #8f62b3; stroke-width: 3; stroke-dasharray: .018 .018; stroke-linecap: round; fill: none; }
+.flow-scene figcaption { margin: 8px 4px 0; font-size: 11px; line-height: 1.5; color: #52644f; }
+@keyframes flow-drop { from { opacity: 0; transform: translateY(-26px); } to { opacity: 1; transform: none; } }
+@keyframes flow-fade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: no-preference) {
+  .flow-scene[data-motion="ready"] .flow-tile,
+  .flow-scene[data-motion="ready"] .flow-link { opacity: 0; }
+  .flow-scene[data-motion="ready"] .flow-loop { opacity: 0; }
+  .flow-scene[data-motion="playing"] .flow-tile { animation: flow-drop .55s cubic-bezier(.22,1,.36,1) backwards; animation-delay: calc(var(--i) * .5s); }
+  .flow-scene[data-motion="playing"] .flow-link { animation: flow-fade .35s ease-out backwards; animation-delay: calc(var(--i) * .5s + .4s); }
+  .flow-scene[data-motion="playing"] .flow-loop { animation: flow-fade .6s ease-out backwards; animation-delay: 2.6s; }
+}
+/* Kinetic hero: words rise in one after another; the last line gets a highlight sweep. */
+@keyframes kt-rise { from { opacity: 0; transform: translateY(.5em); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes kt-sweep { from { background-size: 0 .09em; } to { background-size: 100% .09em; } }
+.kt .kt-word { display: inline-block; }
+.kt em { background: linear-gradient(#58c79c, #58c79c) no-repeat 0 100% / 100% .09em; }
+@media (prefers-reduced-motion: no-preference) {
+  .kt .kt-word { animation: kt-rise .7s cubic-bezier(.22,1,.36,1) backwards; animation-delay: calc(var(--w) * .13s + .1s); }
+  .kt em { animation: kt-sweep .8s ease-out backwards; animation-delay: 1.5s; }
+}

@@ -117,3 +117,4 @@
   .proc-facts { grid-template-columns: minmax(0, 1fr); gap: 2px; }
   .proc-facts dd { margin-bottom: 10px; }
 }
+.proc-stand { margin: 40px 0 0; max-width: 980px; font-size: 14px; line-height: 1.6; color: #52644f; }

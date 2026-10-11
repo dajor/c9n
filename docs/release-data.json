@@ -1,6 +1,22 @@
 {
   "releases": [
     {
+      "version": "0.9.13",
+      "tag": "v0.9.13",
+      "published_at": "2026-10-11T20:41:45Z",
+      "prerelease": false,
+      "url": "https://github.com/dajor/c9n/releases/tag/v0.9.13",
+      "notes": "releases/0.9.13.md",
+      "notes_language": "de",
+      "assets": {
+        "c9n-app-0.9.13-linux-amd64.tar.gz": "https://github.com/dajor/c9n/releases/download/v0.9.13/c9n-app-0.9.13-linux-amd64.tar.gz",
+        "c9n-installer-0.9.13.zip": "https://github.com/dajor/c9n/releases/download/v0.9.13/c9n-installer-0.9.13.zip",
+        "release.json": "https://github.com/dajor/c9n/releases/download/v0.9.13/release.json",
+        "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.9.13/SHA256SUMS-application.txt",
+        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.9.13/SHA256SUMS-installer.txt"
+      }
+    },
+    {
       "version": "0.9.12",
       "tag": "v0.9.12",
       "published_at": "2026-10-11T19:24:26Z",

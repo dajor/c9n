@@ -1,6 +1,22 @@
 {
   "releases": [
     {
+      "version": "0.9.28",
+      "tag": "v0.9.28",
+      "published_at": "2026-10-12T14:30:16Z",
+      "prerelease": false,
+      "url": "https://github.com/dajor/c9n/releases/tag/v0.9.28",
+      "notes": "releases/0.9.28.md",
+      "notes_language": "de",
+      "assets": {
+        "c9n-app-0.9.28-linux-amd64.tar.gz": "https://github.com/dajor/c9n/releases/download/v0.9.28/c9n-app-0.9.28-linux-amd64.tar.gz",
+        "c9n-installer-0.9.28.zip": "https://github.com/dajor/c9n/releases/download/v0.9.28/c9n-installer-0.9.28.zip",
+        "release.json": "https://github.com/dajor/c9n/releases/download/v0.9.28/release.json",
+        "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.9.28/SHA256SUMS-application.txt",
+        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.9.28/SHA256SUMS-installer.txt"
+      }
+    },
+    {
       "version": "0.9.26",
       "tag": "v0.9.26",
       "published_at": "2026-10-12T13:21:02Z",
@@ -14,208 +30,6 @@
         "release.json": "https://github.com/dajor/c9n/releases/download/v0.9.26/release.json",
         "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.9.26/SHA256SUMS-application.txt",
         "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.9.26/SHA256SUMS-installer.txt"
-      }
-    },
-    {
-      "version": "0.8.4",
-      "tag": "v0.8.4",
-      "published_at": "2026-09-24T15:37:00Z",
-      "prerelease": false,
-      "url": "https://github.com/dajor/c9n/releases/tag/v0.8.4",
-      "notes": "releases/0.8.4.md",
-      "notes_language": "de",
-      "assets": {
-        "c9n-app-0.8.4-linux-amd64.tar.gz": "https://github.com/dajor/c9n/releases/download/v0.8.4/c9n-app-0.8.4-linux-amd64.tar.gz",
-        "c9n-installer-0.8.4.zip": "https://github.com/dajor/c9n/releases/download/v0.8.4/c9n-installer-0.8.4.zip",
-        "release.json": "https://github.com/dajor/c9n/releases/download/v0.8.4/release.json",
-        "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.8.4/SHA256SUMS-application.txt",
-        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.8.4/SHA256SUMS-installer.txt"
-      }
-    },
-    {
-      "version": "0.8.3",
-      "tag": "v0.8.3",
-      "published_at": "2026-09-24T15:15:38Z",
-      "prerelease": false,
-      "url": "https://github.com/dajor/c9n/releases/tag/v0.8.3",
-      "notes": "releases/0.8.3.md",
-      "notes_language": "de",
-      "assets": {
-        "c9n-app-0.8.3-linux-amd64.tar.gz": "https://github.com/dajor/c9n/releases/download/v0.8.3/c9n-app-0.8.3-linux-amd64.tar.gz",
-        "c9n-installer-0.8.3.zip": "https://github.com/dajor/c9n/releases/download/v0.8.3/c9n-installer-0.8.3.zip",
-        "release.json": "https://github.com/dajor/c9n/releases/download/v0.8.3/release.json",
-        "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.8.3/SHA256SUMS-application.txt",
-        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.8.3/SHA256SUMS-installer.txt"
-      }
-    },
-    {
-      "version": "0.8.2",
-      "tag": "v0.8.2",
-      "published_at": "2026-09-24T14:19:49Z",
-      "prerelease": false,
-      "url": "https://github.com/dajor/c9n/releases/tag/v0.8.2",
-      "notes": "releases/0.8.2.md",
-      "notes_language": "de",
-      "assets": {
-        "c9n-app-0.8.2-linux-amd64.tar.gz": "https://github.com/dajor/c9n/releases/download/v0.8.2/c9n-app-0.8.2-linux-amd64.tar.gz",
-        "c9n-installer-0.8.2.zip": "https://github.com/dajor/c9n/releases/download/v0.8.2/c9n-installer-0.8.2.zip",
-        "release.json": "https://github.com/dajor/c9n/releases/download/v0.8.2/release.json",
-        "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.8.2/SHA256SUMS-application.txt",
-        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.8.2/SHA256SUMS-installer.txt"
-      }
-    },
-    {
-      "version": "0.8.1",
-      "tag": "v0.8.1",
-      "published_at": "2026-09-24T13:43:52Z",
-      "prerelease": false,
-      "url": "https://github.com/dajor/c9n/releases/tag/v0.8.1",
-      "notes": "releases/0.8.1.md",
-      "notes_language": "de",
-      "assets": {
-        "c9n-app-0.8.1-linux-amd64.tar.gz": "https://github.com/dajor/c9n/releases/download/v0.8.1/c9n-app-0.8.1-linux-amd64.tar.gz",
-        "c9n-installer-0.8.1.zip": "https://github.com/dajor/c9n/releases/download/v0.8.1/c9n-installer-0.8.1.zip",
-        "release.json": "https://github.com/dajor/c9n/releases/download/v0.8.1/release.json",
-        "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.8.1/SHA256SUMS-application.txt",
-        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.8.1/SHA256SUMS-installer.txt"
-      }
-    },
-    {
-      "version": "0.8.0",
-      "tag": "v0.8.0",
-      "published_at": "2026-09-24T12:54:49Z",
-      "prerelease": false,
-      "url": "https://github.com/dajor/c9n/releases/tag/v0.8.0",
-      "notes": "releases/0.8.0.md",
-      "notes_language": "de",
-      "assets": {
-        "c9n-app-0.8.0-linux-amd64.tar.gz": "https://github.com/dajor/c9n/releases/download/v0.8.0/c9n-app-0.8.0-linux-amd64.tar.gz",
-        "c9n-installer-0.8.0.zip": "https://github.com/dajor/c9n/releases/download/v0.8.0/c9n-installer-0.8.0.zip",
-        "release.json": "https://github.com/dajor/c9n/releases/download/v0.8.0/release.json",
-        "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.8.0/SHA256SUMS-application.txt",
-        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.8.0/SHA256SUMS-installer.txt"
-      }
-    },
-    {
-      "version": "0.7.3",
-      "tag": "v0.7.3",
-      "published_at": "2026-09-24T06:40:44Z",
-      "prerelease": false,
-      "url": "https://github.com/dajor/c9n/releases/tag/v0.7.3",
-      "notes": "releases/0.7.3.md",
-      "notes_language": "de",
-      "assets": {
-        "c9n-app-0.7.3-linux-amd64.tar.gz": "https://github.com/dajor/c9n/releases/download/v0.7.3/c9n-app-0.7.3-linux-amd64.tar.gz",
-        "c9n-installer-0.7.3.zip": "https://github.com/dajor/c9n/releases/download/v0.7.3/c9n-installer-0.7.3.zip",
-        "release.json": "https://github.com/dajor/c9n/releases/download/v0.7.3/release.json",
-        "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.7.3/SHA256SUMS-application.txt",
-        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.7.3/SHA256SUMS-installer.txt"
-      }
-    },
-    {
-      "version": "0.7.2",
-      "tag": "v0.7.2",
-      "published_at": "2026-09-24T06:15:51Z",
-      "prerelease": false,
-      "url": "https://github.com/dajor/c9n/releases/tag/v0.7.2",
-      "notes": "releases/0.7.2.md",
-      "notes_language": "de",
-      "assets": {
-        "c9n-app-0.7.2-linux-amd64.tar.gz": "https://github.com/dajor/c9n/releases/download/v0.7.2/c9n-app-0.7.2-linux-amd64.tar.gz",
-        "c9n-installer-0.7.2.zip": "https://github.com/dajor/c9n/releases/download/v0.7.2/c9n-installer-0.7.2.zip",
-        "release.json": "https://github.com/dajor/c9n/releases/download/v0.7.2/release.json",
-        "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.7.2/SHA256SUMS-application.txt",
-        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.7.2/SHA256SUMS-installer.txt"
-      }
-    },
-    {
-      "version": "0.7.1",
-      "tag": "v0.7.1",
-      "published_at": "2026-09-24T06:03:30Z",
-      "prerelease": false,
-      "url": "https://github.com/dajor/c9n/releases/tag/v0.7.1",
-      "notes": "releases/0.7.1.md",
-      "notes_language": "de",
-      "assets": {
-        "c9n-app-0.7.1-linux-amd64.tar.gz": "https://github.com/dajor/c9n/releases/download/v0.7.1/c9n-app-0.7.1-linux-amd64.tar.gz",
-        "c9n-installer-0.7.1.zip": "https://github.com/dajor/c9n/releases/download/v0.7.1/c9n-installer-0.7.1.zip",
-        "release.json": "https://github.com/dajor/c9n/releases/download/v0.7.1/release.json",
-        "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.7.1/SHA256SUMS-application.txt",
-        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.7.1/SHA256SUMS-installer.txt"
-      }
-    },
-    {
-      "version": "0.7.0",
-      "tag": "v0.7.0",
-      "published_at": "2026-09-23T21:04:38Z",
-      "prerelease": false,
-      "url": "https://github.com/dajor/c9n/releases/tag/v0.7.0",
-      "notes": "releases/0.7.0.md",
-      "notes_language": "de",
-      "assets": {
-        "c9n-app-0.7.0-linux-amd64.tar.gz": "https://github.com/dajor/c9n/releases/download/v0.7.0/c9n-app-0.7.0-linux-amd64.tar.gz",
-        "c9n-installer-0.7.0.zip": "https://github.com/dajor/c9n/releases/download/v0.7.0/c9n-installer-0.7.0.zip",
-        "release.json": "https://github.com/dajor/c9n/releases/download/v0.7.0/release.json",
-        "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.7.0/SHA256SUMS-application.txt",
-        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.7.0/SHA256SUMS-installer.txt"
-      }
-    },
-    {
-      "version": "0.6.1",
-      "tag": "v0.6.1",
-      "published_at": "2026-09-23T18:52:04Z",
-      "prerelease": false,
-      "url": "https://github.com/dajor/c9n/releases/tag/v0.6.1",
-      "notes": "releases/0.6.1.md",
-      "notes_language": "de",
-      "assets": {
-        "c9n-app-0.6.1-linux-amd64.tar.gz": "https://github.com/dajor/c9n/releases/download/v0.6.1/c9n-app-0.6.1-linux-amd64.tar.gz",
-        "c9n-installer-0.6.1.zip": "https://github.com/dajor/c9n/releases/download/v0.6.1/c9n-installer-0.6.1.zip",
-        "release.json": "https://github.com/dajor/c9n/releases/download/v0.6.1/release.json",
-        "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.6.1/SHA256SUMS-application.txt",
-        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.6.1/SHA256SUMS-installer.txt"
-      }
-    },
-    {
-      "version": "0.6.0",
-      "tag": "v0.6.0",
-      "published_at": "2026-09-23T18:07:08Z",
-      "prerelease": false,
-      "url": "https://github.com/dajor/c9n/releases/tag/v0.6.0",
-      "notes": "releases/0.6.0.md",
-      "notes_language": "de",
-      "assets": {
-        "c9n-app-0.6.0-linux-amd64.tar.gz": "https://github.com/dajor/c9n/releases/download/v0.6.0/c9n-app-0.6.0-linux-amd64.tar.gz",
-        "c9n-installer-0.6.0.zip": "https://github.com/dajor/c9n/releases/download/v0.6.0/c9n-installer-0.6.0.zip",
-        "release.json": "https://github.com/dajor/c9n/releases/download/v0.6.0/release.json",
-        "SHA256SUMS-application.txt": "https://github.com/dajor/c9n/releases/download/v0.6.0/SHA256SUMS-application.txt",
-        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.6.0/SHA256SUMS-installer.txt"
-      }
-    },
-    {
-      "version": "0.2.0",
-      "tag": "v0.2.0",
-      "published_at": "2026-09-22T13:23:40Z",
-      "prerelease": false,
-      "url": "https://github.com/dajor/c9n/releases/tag/v0.2.0",
-      "notes": "releases/0.2.0.md",
-      "notes_language": "de",
-      "assets": {
-        "c9n-installer-0.2.0.zip": "https://github.com/dajor/c9n/releases/download/v0.2.0/c9n-installer-0.2.0.zip",
-        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.2.0/SHA256SUMS-installer.txt"
-      }
-    },
-    {
-      "version": "0.1.0-alpha.1",
-      "tag": "v0.1.0-alpha.1",
-      "published_at": "2026-09-21T19:11:52Z",
-      "prerelease": true,
-      "url": "https://github.com/dajor/c9n/releases/tag/v0.1.0-alpha.1",
-      "notes": "releases/0.1.0-alpha.1.md",
-      "notes_language": "en",
-      "assets": {
-        "c9n-installer-0.1.0-alpha.1.zip": "https://github.com/dajor/c9n/releases/download/v0.1.0-alpha.1/c9n-installer-0.1.0-alpha.1.zip",
-        "SHA256SUMS-installer.txt": "https://github.com/dajor/c9n/releases/download/v0.1.0-alpha.1/SHA256SUMS-installer.txt"
       }
     }
   ]
